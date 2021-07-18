@@ -17,7 +17,7 @@
 {{ if or .Params.math .Site.Params.math }}
 {{ partial "math.html" . }}
 {{ end }}
-{{ if .Params.disqus }}
+{{ if .Params.comment }}
 {{ partial "disqus.html" . }}
 {{ end }}
 {{ end }}

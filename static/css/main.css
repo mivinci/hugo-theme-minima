@@ -101,14 +101,17 @@ main {
 
 .gap-1 {
   gap: 1rem;
+  row-gap: 1rem;
 }
 
 .gap-2 {
   gap: 2rem;
+  row-gap: 2rem;
 }
 
 .gap-3 {
   gap: 3rem;
+  row-gap: 3rem;
 }
 
 .lg-1 {
@@ -182,6 +185,7 @@ main {
     flex-direction: column;
     align-items: flex-start;
     gap: 0;
+    row-gap: 0;
   }
 
   .al-c-mob {

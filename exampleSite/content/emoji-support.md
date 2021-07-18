@@ -3,9 +3,7 @@ author = "Hugo Authors"
 title = "Emoji Support"
 date = "2021-07-18T10:52:59+08:00"
 description = "Guide to emoji usage in Hugo"
-tags = [
-    "emoji",
-]
+comment = true
 +++
 
 Emoji can be enabled in a Hugo project in a number of ways. 
