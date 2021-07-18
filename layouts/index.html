@@ -1,0 +1,22 @@
+{{ define "main" }}
+	<main>
+		<h2 class="mb-0">I am {{ .Site.Author.name }}</h2>
+		<p>{{ .Site.Author.slogon }}</p>
+		<p>{{ .Site.Author.description }}</p>
+		{{ if eq .Paginator.PageNumber 1 }}
+		<h3>Recent Posts</h3>
+		{{ else }}
+		<h3>All Posts</h3>
+		{{ end }}
+		<div>
+			{{ $paginator := .Paginate (where .Site.RegularPages "Kind" "page") }}
+			{{ range $paginator.Pages }}
+				<div class="row row-mob mb-1 mb-1_5-mob gap-3">
+					<div class="sm-2-mob mb-0_5-mob">{{ dateFormat "Jan 2, 2006" .Date }}</div>
+					<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+				</div>
+			{{ end }}
+			{{ partial "paginator.html" . }}
+		</div>
+	</main>
+{{ end }}

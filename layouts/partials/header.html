@@ -1,0 +1,12 @@
+<header>
+  <h1 class="row gap-1">
+    <div id="theme-switcher" class="btn lg-1"></div>
+    {{ .Site.Title }}
+  </h1>
+  <nav class="row gap-1">
+  {{ range .Site.Menus.main }}
+    <a href="{{ .URL }}">{{ .Name }}</a>
+  {{ end }}
+  </nav>
+  <hr>
+</header>

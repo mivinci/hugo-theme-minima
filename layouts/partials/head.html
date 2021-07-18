@@ -1,0 +1,37 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {{ template "_internal/opengraph.html" . }}
+  {{ template "_internal/twitter_cards.html" . }}
+  {{ template "_internal/google_analytics.html" . }}
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#262d33">
+  <title>
+    {{ if .IsHome }}
+    {{ .Site.Title }} {{ if .Site.Params.subtitle }} - {{ .Site.Params.subtitle }} {{ end }}
+    {{ else }}
+    {{ .Site.Title }} - {{ .Title }}
+    {{ end }}
+  </title>
+  {{ $favicon := "favicon.ico" }}
+  <link rel="shortcut icon" href="{{ $favicon | relURL }}" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/normalize.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="{{ .Site.BaseURL }}/css/main.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="{{ .Site.BaseURL }}/css/md.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="{{ .Site.BaseURL }}/css/syntax.css" />
+  <script src="{{ .Site.BaseURL  }}/js/main.js"></script>
+</head>
+<script>
+  try {
+    if (!('theme' in localStorage)) {
+      localStorage.theme = window.matchMedia('(prefer-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    document.querySelector('html').classList.add(localStorage.theme);
+  } catch (e) {
+    console.error(e);
+  }
+</script>

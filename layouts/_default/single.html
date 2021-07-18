@@ -1,0 +1,24 @@
+{{ define "main" }}
+<main>
+	<h1>{{ .Title }}</h1>
+	<div class="sm-1 mtb-1">
+		Posted at &mdash; {{ dateFormat "Jan 2, 2006" .Date }}
+		{{ if .Draft }}
+		<span class="tag ml-1">
+			DRAFT
+		</span>
+		{{ end }}
+	</div>
+	<p>{{ .Description }}</p>
+	<article class="md">
+		{{ .Content }}
+	</article>
+</main>
+{{ if or .Params.math .Site.Params.math }}
+{{ partial "math.html" . }}
+{{ end }}
+{{ if .Params.disqus }}
+{{ partial "disqus.html" . }}
+{{ end }}
+{{ end }}
+

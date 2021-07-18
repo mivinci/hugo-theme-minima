@@ -1,0 +1,10 @@
+{{ $page := $.Paginator }}
+{{ if gt $page.TotalPages 1 }}
+<div class="mt-2">
+  {{ if $page.HasNext }}
+  <a href="{{ $page.Next.URL }}">Older →</a>
+  {{ else }}
+  <a href="{{ $page.Prev.URL }}">← Newer</a>
+  {{ end }}
+</div>
+{{ end }}

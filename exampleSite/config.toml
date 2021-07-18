@@ -1,0 +1,60 @@
+baseURL = "http://example.org"
+languageCode = "en-us"
+title = "Hi Folks"
+copyright = "© Copyright notice"
+theme = "minima"
+paginate = 5
+googleAnalytics = ""
+disqusShortname = ""
+
+[author]
+name = "XJJ"
+slogon = "A student and web developer from Earth 🌍"
+description = "This is Minima, a clean and minimal Hugo theme porting from Minima on Hexo. It not only inherits everything from Hexo Minima like dark/light mode but intgrated KaTeX and some taxonomies like categories, series and tags. I created this from scratch using pure CSS and Vanilla JS without using unnecessary development packs! 😁"
+
+[params]
+subtitle = ""
+recent_posts = 5
+
+[[params.social]]
+name = "github"  
+url = ""
+[[params.social]]
+name = "linkedin"
+url = ""
+[[params.social]]
+name = "twitter"
+url = ""
+[[params.social]]
+name = "rss"
+url = "/index.xml"
+          
+
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+[[menu.main]]
+name = "Categories"
+url = "/categories"
+weight = 2
+[[menu.main]]
+name = "Series"
+url = "/series"
+weight = 3
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 5
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
+
+# Better not edit this
+[markup.highlight]
+lineNos = true
+noClasses = false
+  

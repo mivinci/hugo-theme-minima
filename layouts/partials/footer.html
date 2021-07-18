@@ -1,0 +1,18 @@
+<footer class="row row-mob al-c-mob col-rev-mob sm-2-mob  jc-bt mtb-2">
+  <p>
+    {{ .Site.Copyright }} |
+    <a href="https://github.com/mivinci/hugo-theme-minima" target="_blank" rel="noopener noreferrer">Minima</a> theme on
+    <a href="https://gohugo.io" target="_blank" rel="noopener noreferrer">Hugo</a>
+  </p>
+  <p class="row gap-0_5">
+    {{ range $_, $key := .Site.Params.Social }}
+      <a class="icon" href="{{ $key.url }}" title="{{ $key.name }}">
+      {{ if $key.svg }}
+        {{ $key.svg | safeHTML }}
+      {{ else }}
+        {{ index $.Site.Data.svg $key.name | safeHTML }}
+      {{ end }}
+      </a>
+    {{ end }}
+  </p>
+</footer>
