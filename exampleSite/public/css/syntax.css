@@ -1,0 +1,122 @@
+pre[class*="language-"],
+code[class*="language-"] {
+  color: #d4d4d4;
+  font-size: 13px;
+  text-shadow: none;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  line-height: 1.5;
+  color: #d4d4d4;
+}
+
+.chroma {
+  background-color: #292929;
+  margin: .5em 0;
+}
+
+/* LineTableTD */
+.chroma .lntd {
+  vertical-align: top;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.chroma .lntable {
+  border-spacing: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  width: auto;
+  overflow: auto;
+  display: block;
+}
+
+/* LineNumbersTable */
+.chroma .lnt {
+  color: #999;
+  display: block;
+  padding-left: .5em;
+  padding-right: 1em;
+  text-align: right;
+  line-height: 1.5;
+  font-size: 13px;
+}
+
+/* Keyword */
+.chroma .kc,
+.chroma .kd,
+.chroma .kn,
+.chroma .kp,
+.chroma .kr,
+.chroma .kt,
+.chroma .k,
+.chroma .si {
+  color: #569cd6;
+}
+
+.chroma .na {
+  color: #9cdcfe;
+}
+
+.chroma .n,
+.chroma .nb,
+.chroma .bp,
+.chroma .nc,
+.chroma .no,
+.chroma .nd,
+.chroma .ni,
+.chroma .ne,
+.chroma .nf,
+.chroma .fm,
+.chroma .nl,
+.chroma .nn {
+  color: #3f4c50;
+}
+
+/* NameProperty */
+.chroma .py,
+.chroma .nt,
+.chroma .nv,
+.chroma .vc,
+.chroma .vg,
+.chroma .vi,
+.chroma .vm {
+  color: #569cd6;
+}
+
+/* LiteralString */
+.chroma .s,
+.chroma .sa,
+.chroma .sb,
+.chroma .sc,
+.chroma .dl,
+.chroma .sd,
+.chroma .s2,
+.chroma .se,
+.chroma .sh,
+.chroma .sx,
+.chroma .sr,
+.chroma .s1,
+.chroma .ss {
+  color: #ce9178;
+}
+/* LiteralNumber */
+.chroma .m,
+.chroma .mb,
+.chroma .mf,
+.chroma .mh,
+.chroma .mi,
+.chroma .il,
+.chroma .mo {
+  color: #b5cea8;
+}
+
+/* Comment */
+.chroma .c,
+.chroma .ch,
+.chroma .cm,
+.chroma .c1,
+.chroma .cs {
+  color: #517043;
+}
+

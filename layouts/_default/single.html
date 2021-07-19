@@ -14,11 +14,17 @@
 		{{ .Content }}
 	</article>
 </main>
-{{ if or .Params.math .Site.Params.math }}
-{{ partial "math.html" . }}
-{{ end }}
-{{ if .Params.comment }}
-{{ partial "disqus.html" . }}
-{{ end }}
+	{{ if or .Params.math .Site.Params.math }}
+		{{ partial "math.html" . }}
+	{{ end }}
+
+	{{ if and .Params.comment (eq .Site.Params.comment "disqus")}}
+		{{ partial "disqus.html" . }}
+	{{ end }}
+
+	{{ if and .Params.comment (eq .Site.Params.comment "ovo")}}
+		{{ partial "ovo.html" . }}
+	{{ end }}
+
 {{ end }}
 

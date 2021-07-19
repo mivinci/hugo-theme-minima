@@ -1,0 +1,29 @@
+<div id="ovo_thread" class="mt-2">
+  <div class="col ai-c">评论插件加载中 OvO</div>
+</div>
+<link rel="stylesheet" href="//unpkg.com/@ovojs/ovo/dist/style.css">
+<script type="text/javascript">
+  (function () {
+    if (window.location.hostname == "localhost")
+      return;
+
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = '//unpkg.com/@ovojs/ovo';
+    (document.getElementsByTagName('head')[0] || 
+      document.getElementsByTagName('body')[0])
+      .appendChild(script);
+
+    script.addEventListener('load', function () {
+      const target = document.getElementById('ovo_thread');
+      target.innerHTML = '';
+      new OvO({
+        target,
+        props: {
+          server: "{{ .Site.Params.ovo.server }}",
+          placeholder: "{{ .Site.Params.ovo.placeholder }}"
+        }
+      })
+    })
+  })();
+</script>

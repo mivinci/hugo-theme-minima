@@ -3,33 +3,65 @@ languageCode = "en-us"
 title = "Hi Folks"
 copyright = "© Copyright notice"
 theme = "minima"
-paginate = 5
+paginate = 7
 googleAnalytics = ""
 disqusShortname = "hugo-minima"
 
+
+# Author has some of your information to be shown on the home 
+# page of your blog.
 [author]
 name = "XJJ"
 slogon = "A student and web developer from Earth 🌍"
 description = "This is Minima, a clean and minimal Hugo theme porting from Minima on Hexo. It not only inherits everything from Hexo Minima like dark/light mode but intgrated KaTeX and some taxonomies like categories, series and tags. I created this from scratch using pure CSS and Vanilla JS without using unnecessary development packs! 😁"
 
-[params]
-subtitle = ""
 
+[params]
+# The subtitle will be shown after the title of your blog site
+#  in a format "title - subtitle".
+subtitle = ""
+# Comment decides the comment plugin used on your blog site, 
+# available plugins: disqus, ovo.
+comment = "disqus"
+
+
+# OvO is a comment plugin written by the author of Minima. 
+# It is enabled when params.comment is set "ovo". You can
+# find its documentation on https://github.com/ovojs/ovo.
+# If you are using disqus, just ignore this field.
+[params.ovo]
+server = ""
+placeholder = ""
+
+
+# Params.social is an array containing your social network accounts,
+# Each has a lowercase name, a svg formatted icon and a url to the 
+# webpage of your account. They will be shown at the bottom of every
+# page of your blog. 
+# Be sure the svgs you select to use must have both the width and the
+# height set 18. If you don't wanna put the svg code in this config
+# file, you can instead save them to the `data/svg.toml` file under 
+# the root directory of your blog using a format like `name = '<svg>'`
 [[params.social]]
 name = "github"  
 url = "https://github.com/mivinci"
+svg = ""
 [[params.social]]
 name = "linkedin"
 url = "https://linkedin/in/leonard-mivinci-63895317a"
+svg = ""
 [[params.social]]
 name = "twitter"
 url = "https://twitter.com/Leonard14733745"
+svg = ""
 [[params.social]]
 name = "rss"
 url = "/index.xml"
-          
+svg = ""
 
 
+# Menu.main is an array that's used to decide what entries can be shown
+# on the navigator of yur blog. You can use a weight to make them ordered.
 [[menu.main]]
 name = "Home"
 url = "/"
@@ -47,12 +79,20 @@ name = "About"
 url = "/about"
 weight = 4
 
+
+# You can classify your posts by setting taxanomies in the front matter like
+# categories = ["apple", "banana"]
+# series = ["s1", "s2"]
+# tags = ["t1", "t2"]
+# A little suggestion: one post belongs to one series, one category and multiple tags.
 [taxonomies]
 category = "categories"
 tag = "tags"
 series = "series"
 
 
+# Make sure all the codes in a post are highlighted correctly
+# so better not edit this.
 [markup.highlight]
 lineNos = true
 noClasses = false
