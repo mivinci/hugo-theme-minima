@@ -17,6 +17,8 @@ description = "This is Minima, a clean and minimal Hugo theme porting from Minim
 
 
 [params]
+# iam is the beginning words of your self-introduction.
+iam = "I am"
 # The subtitle will be shown after the title of your blog site
 #  in a format "title - subtitle".
 subtitle = ""

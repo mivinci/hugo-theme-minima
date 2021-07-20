@@ -1,6 +1,6 @@
 {{ define "main" }}
 	<main>
-		<h2 class="mb-0">I am {{ .Site.Author.name }}</h2>
+		<h2 class="mb-0">{{ .Site.Params.iam }} {{ .Site.Author.name }}</h2>
 		<p>{{ .Site.Author.slogon }}</p>
 		<p>{{ .Site.Author.description }}</p>
 		{{ if eq .Paginator.PageNumber 1 }}
