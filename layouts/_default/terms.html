@@ -6,7 +6,7 @@
   {{ range $key, $value := .Data.Terms.ByCount }}
     <a class="row as-s mb-1" href="/{{ $data.Plural }}/{{ $value.Name }}">
       {{ $value.Name }}
-      <span class="tag ml-1">{{ $value.Count }}</span>
+      <span class="tag-pm ml-1">{{ $value.Count }}</span>
     </a>
   {{ end }}
   </nav>
