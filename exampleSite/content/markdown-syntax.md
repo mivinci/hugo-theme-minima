@@ -119,6 +119,8 @@ Tables aren't part of the core Markdown spec, but Hugo supports supports them ou
 2. Second item
 3. Third item
 
+- [x] xxx
+
 #### Unordered List
 
 * List item

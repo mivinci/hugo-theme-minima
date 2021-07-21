@@ -30,3 +30,7 @@
   width: 100%;
   max-width: 100%;
 }
+
+.md li {
+  margin-top: .5em;
+}

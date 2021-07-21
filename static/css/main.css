@@ -45,6 +45,12 @@ hr {
   border-top: 1px solid var(--bd);
 }
 
+pre,
+code {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 13px;
+}
+
 a {
   text-decoration: none;
 }
