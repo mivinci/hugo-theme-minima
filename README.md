@@ -11,6 +11,7 @@ A Clean and minimal Hugo theme porting from Minima on Hexo. [Click me](https://h
 - [x] KaTeX
 - [x] Google analytics
 - [x] Disqus/OvO comments
+- [x] Optional ToC 
 
 ## Usage
 
@@ -48,9 +49,11 @@ Follow [exampleSite/config.toml](https://github.com/Mivinci/hugo-theme-minima/bl
 | math        | bool   | True if the post needs to render math formulas         |
 | comment     | bool   | True if the post allows people to make comments        |
 | draft       | bool   | True if the post isn't already to production           |
+| toc         | bool   | True if the post needs a ToC                           |
 | categories  | array  | Array of categories the posts belongs to               |
-| series      | array  | Array of series the posts belongs to                   |
+| series      | array  | Array of series the post belongs to                    |
 | tags        | array  | Array of tags the posts is related to                  |
+
 
 ### Feedback
 

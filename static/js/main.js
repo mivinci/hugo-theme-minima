@@ -14,5 +14,8 @@ window.addEventListener('DOMContentLoaded', function () {
     classList.add(newTheme);
     localStorage.theme = newTheme;
     themeSwitcher.innerHTML = text;
-  })
+  });
+
+
+  
 });

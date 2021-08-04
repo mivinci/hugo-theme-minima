@@ -70,7 +70,7 @@ a:not(.icon):focus {
   color: #fff;
 }
 
-.icon:hover {
+a.icon:hover {
   transform: translateY(-5px);
   transition: transform .3s ease-in-out;
 }
@@ -176,6 +176,16 @@ main {
   background-color: var(--pm);
   border-radius: 20px;
   padding: 2px 8px;
+}
+
+details.toc ul {
+  list-style-type: none;
+  padding-inline-start: 1em;
+  margin: 0;
+}
+
+details.toc ul>li {
+  margin: 1em 0;
 }
 
 @keyframes showup {

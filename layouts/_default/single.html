@@ -1,4 +1,7 @@
 {{ define "main" }}
+{{ if .Params.toc }}
+{{ partial "toc.html" . }}
+{{ end }}
 <main>
 	<h1>{{ .Title }}</h1>
 	<div class="sm-1 mtb-1">
@@ -14,17 +17,16 @@
 		{{ .Content }}
 	</article>
 </main>
-	{{ if or .Params.math .Site.Params.math }}
-		{{ partial "math.html" . }}
-	{{ end }}
-
-	{{ if and .Params.comment (eq .Site.Params.comment "disqus")}}
-		{{ partial "disqus.html" . }}
-	{{ end }}
-
-	{{ if and .Params.comment (eq .Site.Params.comment "ovo")}}
-		{{ partial "ovo.html" . }}
-	{{ end }}
-
+{{ if or .Params.math .Site.Params.math }}
+{{ partial "math.html" . }}
 {{ end }}
 
+{{ if and .Params.comment (eq .Site.Params.comment "disqus")}}
+{{ partial "disqus.html" . }}
+{{ end }}
+
+{{ if and .Params.comment (eq .Site.Params.comment "ovo")}}
+{{ partial "ovo.html" . }}
+{{ end }}
+
+{{ end }}
