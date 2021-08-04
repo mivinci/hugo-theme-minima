@@ -34,3 +34,7 @@
 .md li {
   margin-top: .5em;
 }
+
+.md .katex {
+  overflow: auto hidden;
+}
