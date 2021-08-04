@@ -13,6 +13,12 @@ html.dark {
   --ft: #eee;
   --bd: #555;
   --tag: #999;
+
+  --ovo-ft: var(--ft);
+  --ovo-bdr: var(--bd);
+  --ovo-bg: var(--bg);
+  --ovo-bg-hvr: #555;
+  --ovo-tag: #30363d;
 }
 
 body {
