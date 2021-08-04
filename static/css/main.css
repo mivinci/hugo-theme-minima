@@ -152,6 +152,14 @@ main {
   margin-left: 1em;
 }
 
+.mw-6 {
+  min-width: 6em;
+}
+
+.c-tag {
+  color: var(--tag);
+}
+
 .btn {
   cursor: pointer;
 }
@@ -203,7 +211,7 @@ main {
   }
 
   .sm-2-mob {
-    font-size: .8em;
+    font-size: .9em;
   }
 
   .mb-0_5-mob {
