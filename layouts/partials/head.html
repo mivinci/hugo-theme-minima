@@ -20,9 +20,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/normalize.css">
-  <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
-  <link rel="stylesheet" type="text/css" media="screen" href="/css/md.css" />
-  <link rel="stylesheet" type="text/css" media="screen" href="/css/syntax.css" />
+  {{ $hash := now.Unix }}
+  {{ $options := (dict "targetPath" (printf `minima.%d.css` $hash) "outputStyle" "compressed" "enableSourceMap" true) }}
+  {{ $style := resources.Get "sass/main.scss" | resources.ToCSS $options }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+
   <script src="/js/main.js"></script>
 </head>
 <script>
