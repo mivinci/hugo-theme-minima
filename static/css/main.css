@@ -10,7 +10,7 @@
 
 html.dark {
   --bg: #262d33;
-  --ft: #eee;
+  --ft: #c5c4c4;
   --bd: #555;
   --tag: #999;
 
@@ -194,6 +194,11 @@ details.toc ul>li {
   margin: 1em 0;
 }
 
+.nowrap {
+  white-space: nowrap;
+  overflow: auto;
+}
+
 @keyframes showup {
   from {
     opacity: 0;
@@ -254,4 +259,9 @@ details.toc ul>li {
 
 ::-webkit-scrollbar-thumb:active {
   background-color: rgb(128 128 128 / 100%);
+}
+
+.nowrap::-webkit-scrollbar {
+  display: none;
+  width: 0;
 }
