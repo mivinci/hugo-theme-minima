@@ -56,6 +56,12 @@
     font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
     font-size: 13px;
   }
+
+  p code {
+    background-color: var(--bd);
+    padding: .2em .4em;
+    // border-radius: 6px;
+  }
   
   a {
     text-decoration: none;
