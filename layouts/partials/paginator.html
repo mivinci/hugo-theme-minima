@@ -3,14 +3,10 @@
 <div class="mt-2">
   {{ if $page.HasPrev }}
   <a href="{{ $page.Prev.URL }}" class="mr-2">← Newer</a>
-  {{ else }}
-  <span class="mr-2">← Newer</span>
   {{ end }}
 
   {{ if $page.HasNext }}
   <a href="{{ $page.Next.URL }}" class="ml-2">Older →</a>
-  {{ else }}
-  <span class="ml-2">Older →</span>
   {{ end }}
 </div>
 {{ end }}

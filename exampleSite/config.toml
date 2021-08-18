@@ -3,7 +3,7 @@ languageCode = "en-us"
 title = "Hi Folks"
 copyright = "© Copyright notice"
 theme = "minima"
-paginate = 7
+paginate = 5
 googleAnalytics = ""
 disqusShortname = "hugo-minima"
 
