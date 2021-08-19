@@ -1,5 +1,4 @@
 .md blockquote {
-  font-family: 'Inter';
   background-color: rgba(148, 148, 149, 0.08) ;
   margin: 1.5em 0px;
   padding: 1.1em 20px 1px 20px;
@@ -17,13 +16,14 @@
   overflow: auto;
 }
 
-.md table th {
-  background-color: var(--bg);
+.md table thead {
+  background-color: var(--bd);
 }
 
-.md table th, table td {
+.md table th, 
+.md table td {
   padding: 10px 20px;
-  border: 1px solid var(--bd);
+  border-bottom: 1px solid var(--bd);
 }
 
 .md img {
@@ -37,4 +37,17 @@
 
 .md .katex {
   overflow: auto hidden;
+}
+
+.md ul input[type="checkbox"] {
+  margin-right: 3px;
+}
+
+.md .ul-checkbox {
+  list-style: none;
+  padding-inline-start: 20px;
+}
+
+.md .highlight {
+  margin: 1em 0;
 }
