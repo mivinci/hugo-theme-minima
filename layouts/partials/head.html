@@ -19,13 +19,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/normalize.css">
   {{ $hash := now.Unix }}
   {{ $options := (dict "targetPath" (printf `minima.%d.css` $hash) "outputStyle" "compressed" "enableSourceMap" true) }}
   {{ $style := resources.Get "sass/main.scss" | resources.ToCSS $options }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 
-  <script src="/js/main.js"></script>
+  {{ $options := (dict "targetPath" (printf `minima.%d.js` $hash) "minify" true) }}
+  {{ $js := resources.Get "js/main.js" | js.Build $options }}
+  <script defer type="text/javascript" src="{{ $js.RelPermalink }}"></script>
 </head>
 <script>
   try {

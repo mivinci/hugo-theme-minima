@@ -1,12 +1,16 @@
-# Minima
+---
+author: Hugo Authors
+title: Instruction
+date: 2021-07-19T10:52:59+08:00
+description: A Clean and minimal Hugo theme porting from Minima on Hexo. [Click me](https://h.xjj.pub/) to take a look at the demo site.
+math: true
+---
 
-A Clean and minimal Hugo theme porting from Minima on Hexo. [Click me](https://h.xjj.pub/) to take a look at the demo site.
 
-![screenshot](./images/tn.png)
 
 ## Features
 
-- [x] light/dark mode
+- [x] Light/dark mode
 - [x] Code Hightlight
 - [x] KaTeX
 - [x] Mermaid
@@ -43,7 +47,7 @@ Follow [exampleSite/config.toml](https://github.com/Mivinci/hugo-theme-minima/bl
 ### Supported Front Matters
 
 | Field       | Type   | Explanation                                            |
-| ----------- | ------ | ------------------------------------------------------ |
+| :---------- | :----- | :----------------------------------------------------- |
 | title       | string | Title of the post, will be rendered in a `h1` tag      |
 | description | string | Description of the post, will be rendered in a `p` tag |
 | date        | string | Datetime that the post is written                      |
@@ -61,4 +65,3 @@ Follow [exampleSite/config.toml](https://github.com/Mivinci/hugo-theme-minima/bl
 ### Feedback
 
 Feedbacks are welcome [here](https://github.com/Mivinci/hugo-theme-minima/issues).
-

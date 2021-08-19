@@ -1,21 +1,11 @@
-+++
-author = "Hugo Authors"
-title = "Markdown Syntax Guide"
-date = "2021-07-18T10:52:59+08:00"
-description = "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
-tags = [
-    "markdown",
-    "css",
-    "html",
-]
-categories = [
-    "themes",
-    "syntax",
-]
-series = ["Themes Guide"]
-aliases = ["migrate-from-jekyl"]
-toc = true
-+++
+---
+author: "Hugo Authors"
+title: "Markdown Syntax Guide"
+date: "2021-07-18T10:52:59+08:00"
+description: "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
+toc: true
+categories: ["Markdown"]
+---
 
 This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.
 <!--more-->
@@ -120,7 +110,8 @@ Tables aren't part of the core Markdown spec, but Hugo supports supports them ou
 2. Second item
 3. Third item
 
-- [x] xxx
+- [x] checked
+- [ ] not checked
 
 #### Unordered List
 
@@ -138,14 +129,3 @@ Tables aren't part of the core Markdown spec, but Hugo supports supports them ou
   * Milk
   * Cheese
 
-## Other Elements — abbr, sub, sup, kbd, mark
-
-<abbr title="Graphics Interchange Format">GIF</abbr> is a bitmap image format.
-
-H<sub>2</sub>O
-
-X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup>
-
-Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the session.
-
-Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.

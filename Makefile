@@ -4,7 +4,8 @@ themeDir=../..
 .PHONY: dev, build, clean
 
 dev:
-	hugo server -D -s $(source) --themesDir $(themeDir)
+	rm -r exampleSite/resources
+	hugo server -D -s $(source) --themesDir $(themeDir) --disableFastRender
 
 build:
 	hugo -D --gc --minify -s $(source) --themesDir $(themeDir)

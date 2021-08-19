@@ -25,6 +25,8 @@ subtitle = ""
 # Comment decides the comment plugin used on your blog site, 
 # available plugins: disqus, ovo.
 comment = "disqus"
+# timeformat 
+timeformat = "Jan 2, 2006"
 
 
 # OvO is a comment plugin written by the author of Minima. 

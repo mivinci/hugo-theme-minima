@@ -5,20 +5,24 @@
 <main>
 	<h1>{{ .Title }}</h1>
 	<div class="sm-1 mtb-1">
-		Posted at &mdash; {{ dateFormat "Jan 2, 2006" .Date }}
+		Posted at &mdash; {{ dateFormat .Site.Params.timeformat .Date }}
 		{{ if .Draft }}
 		<span class="tag ml-1">
 			DRAFT
 		</span>
 		{{ end }}
 	</div>
-	<p>{{ .Description }}</p>
+	<p>{{ .Description | markdownify | safeHTML }}</p>
 	<article class="md">
 		{{ .Content }}
 	</article>
 </main>
 {{ if or .Params.math .Site.Params.math }}
 {{ partial "math.html" . }}
+{{ end }}
+
+{{ if or .Params.mermaid .Site.Params.mermaid }}
+{{ partial "mermaid.html" . }}
 {{ end }}
 
 {{ if and .Params.comment (eq .Site.Params.comment "disqus")}}
