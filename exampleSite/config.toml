@@ -13,7 +13,7 @@ disqusShortname = "hugo-minima"
 [author]
 name = "XJJ"
 slogon = "A student and web developer from Earth 🌍"
-description = "This is Minima, a clean and minimal Hugo theme porting from Minima on Hexo. It not only inherits everything from Hexo Minima like dark/light mode but intgrated KaTeX and some taxonomies like categories, series and tags. I created this from scratch using pure CSS and Vanilla JS without using unnecessary development packs! 😁"
+description = "This is Minima, a clean and minimal Hugo theme porting from Minima on Hexo. It not only inherits everything from Hexo Minima like dark/light mode but intgrated KaTeX and some taxonomies like categories, series and tags. I created this from scratch using SCSS and Vanilla JS without unnecessary development packs! 😁"
 
 
 [params]
@@ -27,6 +27,8 @@ subtitle = ""
 comment = "disqus"
 # timeformat 
 timeformat = "Jan 2, 2006"
+# switch for turning on/off lights.
+switch = ["🌚", "🌝"]
 
 
 # OvO is a comment plugin written by the author of Minima. 

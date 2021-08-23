@@ -1,4 +1,5 @@
-const light = '🌝', dark = '🌚';
+const light = '{{ index .Site.Params.switch 1 }}',
+  dark = '{{ index .Site.Params.switch 0 }}';
 const LIGHT = 'light', DARK = 'dark';
 const themeSwitcher = document.getElementById('theme-switcher');
 
