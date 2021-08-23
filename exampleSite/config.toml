@@ -2,11 +2,14 @@ baseURL = "http://h.xjj.pub"
 languageCode = "en-us"
 title = "Hi Folks"
 copyright = "© Copyright notice"
-theme = "minima"
 paginate = 5
 googleAnalytics = ""
 disqusShortname = "hugo-minima"
 
+# theme is the name of the hugo theme you choose,
+# `hugo-theme-minima` is put here only for debuging,
+# just name it whatever you're gonna handle the theme.
+theme = "hugo-theme-minima"
 
 # Author has some of your information to be shown on the home 
 # page of your blog.

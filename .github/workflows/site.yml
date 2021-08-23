@@ -22,9 +22,6 @@ jobs:
           hugo-version: '0.85.0'
           extended: true
 
-      - name: Rename
-        run: cd .. && mv hugo-theme-minima minima && cd minima
-
       - name: Build
         run: make build
 
