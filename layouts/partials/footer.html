@@ -4,9 +4,9 @@
     <a href="https://github.com/mivinci/hugo-theme-minima" target="_blank" rel="noopener noreferrer">Minima</a> on
     <a href="https://gohugo.io" target="_blank" rel="noopener noreferrer">Hugo</a>
   </p>
-  <p class="row gap-0_5">
+  <p class="row">
     {{ range $_, $key := .Site.Params.Social }}
-      <a class="icon" href="{{ $key.url }}" title="{{ $key.name }}">
+      <a class="icon mx-0_4" href="{{ $key.url }}" title="{{ $key.name }}">
       {{ if $key.svg }}
         {{ $key.svg | safeHTML }}
       {{ else }}
