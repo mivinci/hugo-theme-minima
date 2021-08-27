@@ -3,9 +3,9 @@
     <div id="theme-switcher" class="btn lg-1"></div>
     {{ .Site.Title }}
   </h1>
-  <nav class="row gap-1">
+  <nav class="row">
   {{ range .Site.Menus.main }}
-    <a href="{{ .URL }}">{{ .Name }}</a>
+    <a class="mr-1" href="{{ .URL }}">{{ .Name }}</a>
   {{ end }}
   </nav>
   <hr>
