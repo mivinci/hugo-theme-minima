@@ -1,12 +1,12 @@
 {{ $page := $.Paginator }}
 {{ if gt $page.TotalPages 1 }}
-<div class="mt-2">
+<div class="my-5 flex justify-between">
   {{ if $page.HasPrev }}
-  <a href="{{ $page.Prev.URL }}" class="mr-2">← Newer</a>
+  <a href="{{ $page.Prev.URL }}">← Newer</a>
   {{ end }}
 
   {{ if $page.HasNext }}
-  <a href="{{ $page.Next.URL }}" class="ml-2">Older →</a>
+  <a href="{{ $page.Next.URL }}">Older →</a>
   {{ end }}
 </div>
 {{ end }}

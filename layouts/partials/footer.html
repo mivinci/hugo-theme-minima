@@ -1,12 +1,12 @@
-<footer class="row row-mob al-c-mob col-rev-mob sm-2-mob jc-bt mtb-2">
-  <p class="c-tag">
+<footer class="flex sm:flex-col-reverse justify-between items-center">
+  <p class="mt-0 text-sm">
     {{ .Site.Copyright }} |
-    <a href="https://github.com/mivinci/hugo-theme-minima" target="_blank" rel="noopener noreferrer">Minima</a> on
-    <a href="https://gohugo.io" target="_blank" rel="noopener noreferrer">Hugo</a>
+    <a href="https://github.com/mivinci/hugo-theme-minima" target="_blank" rel="noopener noreferrer">MINIMA</a> ON
+    <a href="https://gohugo.io" target="_blank" rel="noopener noreferrer">HUGO</a>
   </p>
-  <p class="row">
+  <p class="flex items-center mt-0">
     {{ range $_, $key := .Site.Params.Social }}
-      <a class="icon mx-0_4" href="{{ $key.url }}" title="{{ $key.name }}">
+      <a class="icon mx-2" href="{{ $key.url }}" title="{{ $key.name }}">
       {{ if $key.svg }}
         {{ $key.svg | safeHTML }}
       {{ else }}

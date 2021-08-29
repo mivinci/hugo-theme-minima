@@ -1,7 +1,6 @@
 .md blockquote {
   background-color: rgba(148, 148, 149, 0.08) ;
-  margin: 1.5em 0px;
-  padding: 1.1em 20px 1px 20px;
+  padding: 1px 1rem;
   border-left: 8px solid var(--pm);
   font-style: italic;
 }
@@ -30,10 +29,6 @@
   max-width: 100%;
 }
 
-.md li {
-  margin-top: .5em;
-}
-
 .md .katex {
   overflow: auto hidden;
 }
@@ -47,6 +42,23 @@
   padding-inline-start: 20px;
 }
 
+.md li {
+  margin-bottom: 1rem;
+}
+
+.md ol,
+.md ul,
+.md img,
+.md blockquote,
 .md .highlight {
-  margin: 1em 0;
+  margin: .75rem 0;
+}
+
+.md hr {
+  margin: 1.5rem 0;
+}
+
+.md .footnotes {
+  white-space: nowrap;
+  overflow: auto hidden;
 }

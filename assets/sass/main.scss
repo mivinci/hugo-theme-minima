@@ -1,5 +1,4 @@
-@import "normalize.scss";
-@import "sketch.scss";
+@import "atom.scss";
 @import "markdown.scss";
 @import "syntax.scss";
 
@@ -27,18 +26,15 @@ html.dark {
 }
 
 body {
-  font-family: Helvetica, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
   max-width: var(--w-mobile);
-  margin: 50px auto 0;
+  margin: 3rem auto 0;
   font-size: 16px;
   font-weight: 400;
   color: var(--ft);
   background-color: var(--bg);
   transition-property: background-color, border-color, color;
   transition-duration: 0.5s;
-  @media (max-width: 640px) {
-    margin: 1em 2em;
-  }
 }
 
 h1,
@@ -46,19 +42,16 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: "Noto Serif SC", "Times New Roman", sans-serif;
+  font-family: "Noto Serif SC", 'Times New Roman', Times, sans-serif;
   font-weight: 700;
-  line-height: 1.5;
 }
 
 p {
-  margin-top: 0;
-  line-height: 1.5;
-  text-align: left;
+  line-height: 1.8;
+  text-align: justify;
 }
 
 hr {
-  margin: 30px 0;
   border-width: 0;
   border-top: 1px solid var(--bd);
 }
@@ -103,9 +96,23 @@ main {
   animation: showup 0.7s;
 }
 
+header nav {
+  color: var(--tag);
+}
+
+details.toc ul {
+  list-style-type: none;
+  padding-inline-start: 1em;
+  margin: 0;
+}
+
+details.toc ul > li {
+  margin: 1em 0;
+}
+
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 4px;
+  height: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -119,7 +126,20 @@ main {
   background-color: rgb(128, 128, 128);
 }
 
-.nowrap::-webkit-scrollbar {
+h1::-webkit-scrollbar,
+nav::-webkit-scrollbar {
   display: none;
   width: 0;
+}
+
+@keyframes showup {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }

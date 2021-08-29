@@ -1,18 +1,18 @@
 {{ define "main" }}
-{{ if .Params.toc }}
-{{ partial "toc.html" . }}
-{{ end }}
 <main>
-	<h1>{{ .Title }}</h1>
-	<div class="sm-1 mtb-1">
+	<h1 class="my-6">{{ .Title }}</h1>
+	<div class="mb-3 text-xs">
 		Posted at &mdash; {{ dateFormat .Site.Params.timeformat .Date }}
 		{{ if .Draft }}
-		<span class="tag ml-1">
+		<span class="ml-1">
 			DRAFT
 		</span>
 		{{ end }}
 	</div>
 	<p>{{ .Description | markdownify | safeHTML }}</p>
+	{{ if .Params.toc }}
+	{{ partial "toc.html" . }}
+	{{ end }}
 	<article class="md">
 		{{ .Content }}
 	</article>

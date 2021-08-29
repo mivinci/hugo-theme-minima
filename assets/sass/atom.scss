@@ -1,0 +1,119 @@
+* {
+  line-height: 1;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+$unit: 0.25rem;
+$scales: 0, 1, 2, 3, 4, 5, 6, 7, 8, 1.5;
+$screens: (
+  sm\:: 640px,
+);
+
+@mixin scale_with_prefix($prefix, $scale) {
+  $size: $scale * $unit;
+  .#{$prefix}mt-#{$scale} {
+    margin-top: $size;
+  }
+  .#{$prefix}mb-#{$scale} {
+    margin-bottom: $size;
+  }
+  .#{$prefix}ml-#{$scale} {
+    margin-left: $size;
+  }
+  .#{$prefix}mr-#{$scale} {
+    margin-right: $size;
+  }
+  .#{$prefix}my-#{$scale} {
+    margin-top: $size;
+    margin-bottom: $size;
+  }
+  .#{$prefix}mx-#{$scale} {
+    margin-left: $size;
+    margin-right: $size;
+  }
+}
+
+@each $scale in $scales {
+  @include scale_with_prefix("", $scale);
+
+  @each $screen, $size in $screens {
+    @media (max-width: $size) {
+      @include scale_with_prefix($screen, $scale);
+    }
+  }
+}
+
+@mixin style_with_prefix($prefix) {
+  .#{$prefix}block {
+    display: block;
+  }
+  .#{$prefix}flex {
+    display: flex;
+  }
+  .#{$prefix}flex-row {
+    flex-direction: row;
+  }
+  .#{$prefix}flex-col {
+    flex-direction: column;
+  }
+  .#{$prefix}flex-col-reverse {
+    flex-direction: column-reverse;
+  }
+  .#{$prefix}justify-between {
+    justify-content: space-between;
+  }
+  .#{$prefix}flex-nowrap {
+    flex-wrap: nowrap;
+  }
+  .#{$prefix}items-center {
+    align-items: center;
+  }
+  .#{$prefix}self-start {
+    align-self: flex-start;
+  }
+  .#{$prefix}hidden {
+    display: none;
+  }
+  .#{$prefix}text-xs {
+    font-size: .8rem;
+  }
+  .#{$prefix}text-sm {
+    font-size: .9rem;
+  }
+  .#{$prefix}text-4xl {
+    font-size: 2.25rem;
+  }
+}
+
+@include style_with_prefix("");
+@each $screen, $size in $screens {
+  @media (max-width: $size) {
+    @include style_with_prefix($screen);
+  }
+}
+
+// border width
+.bw-0 {
+  border-width: 0;
+}
+
+// width
+.min-w-32 {
+  min-width: 0.25 * 32rem;
+}
+
+.whitespace-nowrap {
+  white-space: nowrap;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}

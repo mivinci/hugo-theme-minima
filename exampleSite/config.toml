@@ -23,7 +23,7 @@ description = "This is Minima, a clean and minimal Hugo theme porting from Minim
 # iam is the beginning words of your self-introduction.
 iam = "I am"
 # The subtitle will be shown after the title of your blog site
-#  in a format "title - subtitle".
+#  in a format like "title - subtitle".
 subtitle = ""
 # Comment decides the comment plugin used on your blog site, 
 # available plugins: disqus, ovo.

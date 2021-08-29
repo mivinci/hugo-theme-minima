@@ -1,12 +1,12 @@
 {{ define "main" }}
 <main>
   <h2>{{ .Title }}</h2>
-  <nav class="col">
+  <nav class="flex flex-col">
   {{ $data := .Data }}
   {{ range $key, $value := .Data.Terms.ByCount }}
-    <a class="row as-s mb-1" href="/{{ $data.Plural }}/{{ $value.Name }}">
+    <a class="mb-5 self-start" href="/{{ $data.Plural }}/{{ $value.Name }}">
       {{ $value.Name }}
-      <span class="tag-pm ml-1">{{ $value.Count }}</span>
+      <span class="">{{ $value.Count }}</span>
     </a>
   {{ end }}
   </nav>

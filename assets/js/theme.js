@@ -8,7 +8,7 @@ themeSwitcher.innerHTML = localStorage.theme === LIGHT ? light : dark;
 themeSwitcher.addEventListener('click', function () {
   const currentTheme = localStorage.theme,
     newTheme = currentTheme === LIGHT ? DARK : LIGHT,
-    { classList } = document.querySelector('html'),
+    { classList } = document.documentElement,
     text = newTheme === LIGHT ? light : dark;
   classList.remove(currentTheme);
   classList.add(newTheme);

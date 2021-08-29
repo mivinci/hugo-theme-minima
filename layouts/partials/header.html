@@ -1,12 +1,16 @@
 <header>
-  <h1 class="row gap-1 nowrap">
-    <div id="theme-switcher" class="btn lg-1"></div>
-    {{ .Site.Title }}
-  </h1>
-  <nav class="row">
-  {{ range .Site.Menus.main }}
-    <a class="mr-1" href="{{ .URL }}">{{ .Name }}</a>
-  {{ end }}
+  <div class="flex justify-between items-center">
+    <h1 class="mb-5 flex items-center
+    whitespace-nowrap overflow-x-auto overflow-y-hidden">
+      {{ .Site.Title }}
+    </h1>
+    <div id="theme-switcher" class="text-4xl ml-4 cursor-pointer">{{ index .Site.Params.switch 1 }}</div>
+  </div>
+  <nav class="mb-5 flex items-center
+    whitespace-nowrap overflow-x-auto overflow-y-hidden">
+    {{ range .Site.Menus.main }}
+    <a class="mr-3" href="{{ .URL }}">{{ .Name }}</a>
+    {{ end }}
   </nav>
   <hr>
 </header>

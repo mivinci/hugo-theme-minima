@@ -7,8 +7,8 @@
 		{{ end }}
 		<div>
 			{{ range .Data.Pages }}
-				<div class="row row-mob mb-1 mb-1_5-mob gap-3">
-					<div class="sm-2-mob mb-0_5-mob">{{ dateFormat "Jan 2, 2006" .Date }}</div>
+				<div class="flex sm:flex-col my-5 sm:mb-6 sm:mt-3">
+					<div class="min-w-32 sm:mb-2">{{ dateFormat .Site.Params.timeformat .Date }}</div>
 					<a href="{{ .RelPermalink }}">{{ .Title }}</a>
 				</div>
 			{{ end }}
