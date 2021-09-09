@@ -44,6 +44,7 @@ h4,
 h5 {
   font-family: "Noto Serif SC", 'Times New Roman', Times, sans-serif;
   font-weight: 700;
+  line-height: 1.5;
 }
 
 p {
@@ -62,6 +63,7 @@ code {
   font-size: 13px;
 }
 
+.tag,
 p code {
   background-color: var(--bd);
   padding: 0.2em 0.4em;
@@ -70,9 +72,14 @@ p code {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
-a:not(.icon) {
+a:hover {
+  color: var(--pm);
+}
+
+main a:not(.icon) {
   color: inherit;
   text-decoration: underline;
   text-decoration-color: var(--pm);
@@ -81,13 +88,13 @@ a:not(.icon) {
   transition: background-position 0.2s ease-in-out;
 }
 
-a:not(.icon):hover,
-a:not(.icon):focus {
+main a:not(.icon):hover,
+main a:not(.icon):focus {
   background-position: 0 100%;
   color: #fff;
 }
 
-a.icon:hover {
+main a.icon:hover {
   transform: translateY(-5px);
   transition: transform 0.3s ease-in-out;
 }

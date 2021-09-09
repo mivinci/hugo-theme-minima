@@ -1,6 +1,8 @@
 * {
   line-height: 1;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
+  user-select: none;
+  outline: none;
 }
 
 $unit: 0.25rem;
@@ -80,6 +82,18 @@ $screens: (
   .#{$prefix}text-sm {
     font-size: .9rem;
   }
+  .#{$prefix}text-md {
+    font-size: 1.25rem;
+  }
+  .#{$prefix}text-xl {
+    font-size: 1.5rem;
+  }
+  .#{$prefix}text-2xl {
+    font-size: 1.75rem;
+  }
+  .#{$prefix}text-3xl {
+    font-size: 2rem;
+  }
   .#{$prefix}text-4xl {
     font-size: 2.25rem;
   }
@@ -116,4 +130,10 @@ $screens: (
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.not-first\:ml-3 {
+  &:not(:first-child) {
+    margin-left: 0.75rem;
+  }
 }

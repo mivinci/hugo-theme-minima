@@ -1,18 +1,27 @@
 {{ define "main" }}
-<main>
-	<h1 class="my-6">{{ .Title }}</h1>
-	<div class="mb-3 text-xs">
+{{ if .Params.toc }}
+{{ partial "toc.html" . }}
+{{ end }}
+<h1 class="mt-8 mb-6">{{ .Title }}</h1>
+<div class="mb-3 text-xs flex justify-between sm:flex-col">
+	<div>
 		Posted at &mdash; {{ dateFormat .Site.Params.timeformat .Date }}
 		{{ if .Draft }}
-		<span class="ml-1">
+		<span class="ml-3 tag">
 			DRAFT
 		</span>
 		{{ end }}
 	</div>
-	<p>{{ .Description | markdownify | safeHTML }}</p>
-	{{ if .Params.toc }}
-	{{ partial "toc.html" . }}
+	{{ if .Params.tags }}
+	<div class="sm:mt-4">
+		{{ range .Params.tags }}
+		<a class="not-first:ml-3" href="/tags/{{ . }}">#{{ . }}</a>
+		{{ end }}
+	</div>
 	{{ end }}
+</div>
+<main>
+	<p>{{ .Description | markdownify | safeHTML }}</p>
 	<article class="md">
 		{{ .Content }}
 	</article>

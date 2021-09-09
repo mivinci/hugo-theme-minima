@@ -1,17 +1,14 @@
 {{ define "main" }}
-	<main>
-		{{ if isset .Data "Term" }}
-			<h2>{{ .Data.Singular | title }} - "{{ .Data.Term }}"</h2>
-		{{ else }}
-			
+<main>
+	{{ if isset .Data "Term" }}
+	<h2 class="my-8">{{ .Data.Singular | title }} - "{{ .Data.Term }}"</h2>
+	{{ else }}
+	<h2 class="my-8">{{ .Title }}</h2>
+	{{ end }}
+	<div class="mt-8">
+		{{ range .Data.Pages }}
+		{{ partial "list.html" . }}
 		{{ end }}
-		<div>
-			{{ range .Data.Pages }}
-				<div class="flex sm:flex-col my-5 sm:mb-6 sm:mt-3">
-					<div class="min-w-32 sm:mb-2">{{ dateFormat .Site.Params.timeformat .Date }}</div>
-					<a href="{{ .RelPermalink }}">{{ .Title }}</a>
-				</div>
-			{{ end }}
-		</div>
-	</main>
+	</div>
+</main>
 {{ end }}

@@ -1,20 +1,17 @@
 {{ define "main" }}
 	<main>
-		<h2 class="mt-5 mb-1">{{ .Site.Params.iam }} {{ .Site.Author.name }}</h2>
+		<h2 class="mt-8 mb-1">{{ .Site.Params.iam }} {{ .Site.Author.name }}</h2>
 		<p class="my-0">{{ .Site.Author.slogon }}</p>
 		<p class="my-3">{{ .Site.Author.description | markdownify | safeHTML }}</p>
 		{{ if eq .Paginator.PageNumber 1 }}
-		<h3 class="my-5">Recent Posts</h3>
+		<h3 class="my-6">Recent Posts</h3>
 		{{ else }}
-		<h3 class="my-5">Older Posts</h3>
+		<h3 class="my-6">Older Posts</h3>
 		{{ end }}
 		<div>
 			{{ $paginator := .Paginate (where .Site.RegularPages "Kind" "page") }}
 			{{ range $paginator.Pages }}
-				<div class="flex sm:flex-col my-5 sm:mb-6 sm:mt-3">
-					<div class="min-w-32 sm:mb-2">{{ dateFormat .Site.Params.timeformat .Date }}</div>
-					<a class="self-start" href="{{ .RelPermalink }}">{{ .Title }}</a>
-				</div>
+			{{ partial "list.html" . }}
 			{{ end }}
 			{{ partial "paginator.html" . }}
 		</div>
