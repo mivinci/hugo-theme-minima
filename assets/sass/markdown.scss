@@ -59,6 +59,10 @@
 }
 
 .md .footnotes {
-  white-space: nowrap;
-  overflow: auto hidden;
+  word-break: break-all;
+  font-size: .9rem;
+}
+
+.md p sup {
+  margin-left: 4px;
 }
