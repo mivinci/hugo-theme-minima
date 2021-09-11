@@ -2,13 +2,15 @@
 <main>
   <h2>{{ .Title }}</h2>
   <nav class="flex flex-col">
-  {{ $data := .Data }}
-  {{ range $key, $value := .Data.Terms.ByCount }}
-    <a class="mb-5 self-start" href="/{{ $data.Plural }}/{{ $value.Name }}">
-      {{ $value.Name }}
+    {{ $data := .Data }}
+    {{ range $key, $value := .Data.Terms.ByCount }}
+    <div class="mb-5 flex justify-between">
+      <a class="self-start" href="/{{ $data.Plural }}/{{ $value.Name }}">
+        {{ $value.Name }}
+      </a>
       <span class="">{{ $value.Count }}</span>
-    </a>
-  {{ end }}
+    </div>
+    {{ end }}
   </nav>
 </main>
 {{ end }}
