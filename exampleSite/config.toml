@@ -32,8 +32,10 @@ comment = "disqus"
 timeformat = "Jan 2, 2006"
 # switch for turning on/off lights.
 switch = ["🌚", "🌝"]
-# if true, date of posts will be displayed in the homepage
+# if true, date of posts will be displayed in the homepage.
 displayDate = true
+# if true, users can select text from your post.
+selectable = false
 
 
 # OvO is a comment plugin written by the author of Minima. 
