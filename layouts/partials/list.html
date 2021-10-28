@@ -1,5 +1,5 @@
 <div class="flex sm:flex-col my-5 sm:mb-6 sm:mt-3">
-{{ if .Params.displayDate }}
+{{ if .Site.Params.displayDate }}
   <div class="min-w-32 sm:mb-2 sm:text-sm">{{ dateFormat .Site.Params.timeformat .Date }}</div>
 {{ end }}
   <a class="self-start" href="{{ .RelPermalink }}">{{ .Title }}</a>
