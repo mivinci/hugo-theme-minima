@@ -5,7 +5,9 @@
 <h1 class="mt-8 mb-6">{{ .Title }}</h1>
 <div class="mb-3 text-xs flex justify-between sm:flex-col">
 	<div>
+	{{ if .Site.Params.displayDate }}
 		Posted at &mdash; {{ dateFormat .Site.Params.timeformat .Date }}
+	{{ end }}
 		{{ if .Draft }}
 		<span class="ml-3 tag">
 			DRAFT
