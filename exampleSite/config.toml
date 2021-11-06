@@ -15,7 +15,7 @@ theme = "hugo-theme-minima"
 # page of your blog.
 [author]
 name = "XJJ"
-slogon = "A student and web developer from Earth 🌍"
+slogon = "A student and tech lover from Earth 🌍"
 description = "This is Minima, a clean and minimal Hugo theme porting from Minima on Hexo. Except for everything from Hexo Minima like dark/light mode, it supports KaTeX and some taxonomies like categories, series and tags. I created this using SCSS, Vanilla JS and most importantly, Hugo. 😁"
 
 
@@ -25,8 +25,8 @@ iam = "I am"
 # The subtitle will be shown after the title of your blog site
 #  in a format like "title - subtitle".
 subtitle = ""
-# Comment decides the comment plugin used on your blog site, 
-# available plugins: disqus, ovo.
+# Comment decides the comment plugin to be used on your blog site, 
+# e.g. disqus, ovo.
 comment = "disqus"
 # timeformat 
 timeformat = "Jan 2, 2006"
