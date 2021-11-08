@@ -29,7 +29,7 @@ subtitle = ""
 # e.g. disqus, ovo.
 comment = "disqus"
 # timeformat 
-timeformat = "Jan 2, 2006"
+timeformat = "Jan 02, 2006"
 # switch for turning on/off lights.
 switch = ["🌚", "🌝"]
 # if true, date of posts will be displayed in the homepage.
