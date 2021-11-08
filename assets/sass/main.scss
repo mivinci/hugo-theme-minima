@@ -10,6 +10,8 @@
   --tag: #333;
 
   --w-mobile: 640px;
+
+  --global-font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 html.dark {
@@ -26,7 +28,7 @@ html.dark {
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-family: var(--global-font-family);
   max-width: var(--w-mobile);
   margin: 3rem auto 0;
   font-size: 16px;

@@ -4,7 +4,7 @@ themeDir=../..
 .PHONY: dev, build, clean
 
 dev:
-	rm -r exampleSite/resources
+	-rm -r exampleSite/resources
 	hugo server -D -s $(source) --themesDir $(themeDir) --disableFastRender
 
 build:

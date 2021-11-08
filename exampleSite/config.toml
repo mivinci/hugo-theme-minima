@@ -1,8 +1,8 @@
 baseURL = "http://h.xjj.pub"
 languageCode = "en-us"
 title = "Hi Folks"
-copyright = "© Copyright notice"
-paginate = 5
+copyright = "© XJJ 2021"
+paginate = 6
 googleAnalytics = ""
 disqusShortname = "hugo-minima"
 
@@ -25,8 +25,8 @@ iam = "I am"
 # The subtitle will be shown after the title of your blog site.
 # e.g. "title - subtitle".
 subtitle = ""
-# Comment decides the comment plugin used on your blog site, 
-# available plugins: disqus, ovo.
+# Comment decides the comment plugin to be used on your blog site, 
+# e.g. disqus, ovo.
 comment = "disqus"
 # timeformat 
 timeformat = "Jan 2, 2006"
@@ -35,7 +35,10 @@ switch = ["🌚", "🌝"]
 # if true, date of posts will be displayed in the homepage.
 displayDate = true
 # if true, users can select text from your post.
-selectable = false
+selectable = true
+# custom global font. notice:  `globalFontFamily` won't be working
+# on texts in some special positions. e.g. title 
+globalFontFamily = 'Helvatica, sans-serif'
 
 
 # OvO is a comment plugin written by the author of Minima. 
