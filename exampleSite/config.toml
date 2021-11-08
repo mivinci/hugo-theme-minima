@@ -15,15 +15,15 @@ theme = "hugo-theme-minima"
 # page of your blog.
 [author]
 name = "XJJ"
-slogon = "A student and web developer from Earth 🌍"
+slogon = "A student and tech lover from Earth 🌍"
 description = "This is Minima, a clean and minimal Hugo theme porting from Minima on Hexo. Except for everything from Hexo Minima like dark/light mode, it supports KaTeX and some taxonomies like categories, series and tags. I created this using SCSS, Vanilla JS and most importantly, Hugo. 😁"
 
 
 [params]
 # iam is the beginning words of your self-introduction.
 iam = "I am"
-# The subtitle will be shown after the title of your blog site
-#  in a format like "title - subtitle".
+# The subtitle will be shown after the title of your blog site.
+# e.g. "title - subtitle".
 subtitle = ""
 # Comment decides the comment plugin used on your blog site, 
 # available plugins: disqus, ovo.
@@ -33,7 +33,7 @@ timeformat = "Jan 2, 2006"
 # switch for turning on/off lights.
 switch = ["🌚", "🌝"]
 # if true, date of posts will be displayed in the homepage.
-displayDate = false
+displayDate = true
 # if true, users can select text from your post.
 selectable = false
 
@@ -51,10 +51,10 @@ placeholder = ""
 # Each has a lowercase name, a svg formatted icon and a url to the 
 # webpage of your account. They will be shown at the bottom of every
 # page of your blog. 
-# Be sure the svgs you select to use must have both the width and the
-# height set 18. If you don't wanna put the svg code in this config
-# file, you can instead save them to the `data/svg.toml` file under 
-# the root directory of your blog using a format like `name = '<svg>'`
+# Be sure the svgs you use must have both its width and its height
+# set 18. If you don't wanna put the svg code in this config file, 
+# you can instead save them to the `data/svg.toml` file under the
+# root directory of your blog. e.g. `name = '<svg>'`
 [[params.social]]
 name = "github"  
 url = "https://github.com/mivinci"
@@ -93,11 +93,12 @@ url = "/about"
 weight = 4
 
 
-# You can classify your posts by setting taxanomies in the front matter like
-# categories = ["apple", "banana"]
-# series = ["s1", "s2"]
-# tags = ["t1", "t2"]
-# A little suggestion: one post belongs to one series, one category and multiple tags.
+# You can classify your posts by setting taxanomies in the front matter
+# e.g.
+#     categories = ["dev"]
+#     series = ["Building an RPC server"]
+#     tags = ["hugo", "golang"]
+# A little suggestion: one post belongs to one series or one category or multiple tags.
 [taxonomies]
 category = "categories"
 tag = "tags"
