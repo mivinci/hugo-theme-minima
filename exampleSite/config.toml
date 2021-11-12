@@ -4,7 +4,6 @@ title = "Hi Folks"
 copyright = "© XJJ 2021"
 paginate = 6
 googleAnalytics = ""
-disqusShortname = "hugo-minima"
 
 # theme is the name of the hugo theme you choose,
 # `hugo-theme-minima` is put here only for debuging,
@@ -26,8 +25,8 @@ iam = "I am"
 # e.g. "title - subtitle".
 subtitle = ""
 # Comment decides the comment plugin to be used on your blog site, 
-# e.g. disqus, ovo.
-comment = "disqus"
+# e.g. disqus, utterances, ovo.
+comment = "utterances"
 # timeformat 
 timeformat = "Jan 02, 2006"
 # switch for turning on/off lights.
@@ -36,15 +35,24 @@ switch = ["🌚", "🌝"]
 displayDate = true
 # if true, users can select text from your post.
 selectable = true
-# custom global font. notice:  `globalFontFamily` won't be working
-# on texts in some special positions. e.g. title 
+# custom global font. notice: `globalFontFamily` won't be working
+# on texts in some special positions like on titles
 globalFontFamily = 'Helvatica, sans-serif'
 
+# Disqus configuration
+[params.disqus]
+shortname = "hugo-minima"
 
-# OvO is a comment plugin written by the author of Minima. 
+# Utterance configuration
+# Full doc's at https://utteranc.es
+[params.utterances]
+repo = "mivinci/minima-comments"
+issueTerm = "pathname"
+
+# OvO is a comment plugin written by the author of Minima.
 # It is enabled when params.comment is set "ovo". You can
 # find its documentation on https://github.com/ovojs/ovo.
-# If you are using disqus, just ignore this field.
+# If you are using disqus or utterance, just ignore this field.
 [params.ovo]
 server = ""
 placeholder = ""

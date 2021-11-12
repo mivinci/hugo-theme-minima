@@ -4,6 +4,7 @@ title: Instruction
 date: 2021-07-19T10:52:59+08:00
 description: A Clean and minimal Hugo theme porting from Minima on Hexo. [Click me](https://h.xjj.pub/) to take a look at the demo site.
 math: true
+comment: true
 ---
 
 

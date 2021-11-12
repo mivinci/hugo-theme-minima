@@ -44,4 +44,8 @@
 {{ partial "ovo.html" . }}
 {{ end }}
 
+{{ if and .Params.comment (eq .Site.Params.comment "utterances")}}
+{{ partial "utterances.html" . }}
+{{ end }}
+
 {{ end }}
