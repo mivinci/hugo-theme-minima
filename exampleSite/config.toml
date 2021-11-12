@@ -45,10 +45,13 @@ shortname = "hugo-minima"
 
 # Utterance configuration
 # Full doc's at https://utteranc.es
+# **notice**: if you're going to use utterances, you must change the 
+# `repo` to your own repo address that stores comments on your site
 [params.utterances]
-repo = "mivinci/minima-comments"
+repo = "mivinci/hugo-theme-minima"
 issueTerm = "pathname"
 
+# **deprecated**
 # OvO is a comment plugin written by the author of Minima.
 # It is enabled when params.comment is set "ovo". You can
 # find its documentation on https://github.com/ovojs/ovo.
