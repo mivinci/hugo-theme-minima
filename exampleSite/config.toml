@@ -16,7 +16,7 @@ theme = "hugo-theme-minima"
 [author]
 name = "XJJ"
 slogon = "A student and tech lover from Earth 🌍"
-description = "This is Minima, a clean and minimal Hugo theme porting from Minima on Hexo. Except for everything from Hexo Minima like dark/light mode, it supports KaTeX and some taxonomies like categories, series and tags. I created this using SCSS, Vanilla JS and most importantly, Hugo. 😁"
+description = "This is Minima, a clean and minimal Hugo theme porting from [Minima on Hexo](https://github.com/adisaktijrs/hexo-theme-minima). Except for everything from Hexo Minima like dark/light mode, it supports KaTeX and some taxonomies like categories, series and tags. I created this using SCSS, Vanilla JS and most importantly, Hugo. 😁"
 
 
 [params]
