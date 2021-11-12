@@ -6,17 +6,17 @@ A Clean and minimal Hugo theme porting from [Minima on Hexo](https://github.com/
 
 ## Features
 
-- [x] light/dark mode
-- [x] Code Hightlight
+- [x] Light/dark mode
+- [x] VSCode-style code hightlighting
 - [x] KaTeX
 - [x] Mermaid
 - [x] Google analytics
-- [x] Disqus/OvO comments
+- [x] Disqus/Utterances comments
 - [x] Optional ToC 
 
 ## Usage
 
-Before using Minima, make sure you've got Hugo(v0.41.0 or higher) installed on your device.
+Before using Minima, make sure you've got Hugo (extended version) installed on your device.
 
 ### Installation
 

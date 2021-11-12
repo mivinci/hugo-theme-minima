@@ -12,11 +12,11 @@ comment: true
 ## Features
 
 - [x] Light/dark mode
-- [x] Code Hightlight
+- [x] VSCode-style code hightlighting
 - [x] KaTeX
 - [x] Mermaid
 - [x] Google analytics
-- [x] Disqus/OvO comments
+- [x] Disqus/Utterances comments
 - [x] Optional ToC 
 
 ## Usage
