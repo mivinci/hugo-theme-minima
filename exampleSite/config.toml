@@ -71,7 +71,7 @@ placeholder = ""
 # root directory of your blog. e.g. `name = '<svg>'`
 [[params.social]]
 name = "github"  
-url = "https://github.com/mivinci"
+url = "https://github.com/mivinci/hugo-theme-minima"
 svg = ""
 [[params.social]]
 name = "linkedin"
