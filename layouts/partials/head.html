@@ -25,8 +25,7 @@
   <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 
   {{ $options = (dict "targetPath" (printf `minima.%d.js` $hash) "minify" true) }}
-  {{ $js := resources.Get "js/main.js" | js.Build $options | resources.ExecuteAsTemplate (printf `minima.%d.js` $hash) .
-  }}
+  {{ $js := resources.Get "js/main.js" | js.Build $options | resources.ExecuteAsTemplate (printf `minima.%d.js` $hash) . }}
   <script defer type="text/javascript" src="{{ $js.RelPermalink }}"></script>
 </head>
 <script>
