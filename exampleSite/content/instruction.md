@@ -7,8 +7,6 @@ math: true
 comment: true
 ---
 
-
-
 ## Features
 
 - [x] Light/dark mode
@@ -48,7 +46,7 @@ Follow [exampleSite/config.toml](https://github.com/Mivinci/hugo-theme-minima/bl
 ### Supported Front Matters
 
 | Field       | Type   | Explanation                                            |
-| :---------- | :----- | :----------------------------------------------------- |
+|:----------- |:------ |:------------------------------------------------------ |
 | title       | string | Title of the post, will be rendered in a `h1` tag      |
 | description | string | Description of the post, will be rendered in a `p` tag |
 | date        | string | Datetime that the post is written                      |
@@ -60,8 +58,6 @@ Follow [exampleSite/config.toml](https://github.com/Mivinci/hugo-theme-minima/bl
 | comment     | bool   | True if the post allows people to make comments        |
 | draft       | bool   | True if the post isn't already to production           |
 | toc         | bool   | True if the post needs a ToC                           |
-
-
 
 ### Feedback
 

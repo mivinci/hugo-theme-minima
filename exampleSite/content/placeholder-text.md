@@ -37,7 +37,9 @@ Iubar proles corpore raptos vero auctor imperium; sed et huic: manus caeli Leleg
 Eurytus Hector, materna ipsumque ut Politen, nec, nate, ignari, vernum cohaesit sequitur. Vel **mitis temploque** vocatus, inque alis, *oculos nomen* non silvis corpore coniunx ne displicet illa. Crescunt non unus, vidit visa quantum inmiti flumina mortis facto sic: undique a alios vincula sunt iactata abdita! Suspenderat ego fuit tendit: luna, ante urbem Propoetides **parte**.
 
 {{< css.inline >}}
+
 <style>
 .canon { background: white; width: 100%; height: auto; }
 </style>
+
 {{< /css.inline >}}

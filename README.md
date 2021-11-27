@@ -56,9 +56,6 @@ Follow [exampleSite/config.toml](https://github.com/Mivinci/hugo-theme-minima/bl
 | draft       | bool   | True if the post isn't already to production           |
 | toc         | bool   | True if the post needs a ToC                           |
 
-
-
 ### Feedback
 
 Feedbacks are welcome [here](https://github.com/Mivinci/hugo-theme-minima/issues).
-
