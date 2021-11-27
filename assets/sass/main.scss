@@ -81,28 +81,18 @@ a:hover {
   color: var(--pm);
 }
 
-main a:not(.icon) {
-  color: inherit;
-  text-decoration: underline;
-  text-decoration-color: var(--pm);
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, var(--pm) 50%);
-  background-size: 100% 200%;
-  transition: background-position 0.2s ease-in-out;
-}
-
-main a:not(.icon):hover,
-main a:not(.icon):focus {
-  background-position: 0 100%;
-  color: #fff;
-}
-
-main a.icon:hover {
-  transform: translateY(-5px);
-  transition: transform 0.3s ease-in-out;
-}
-
 main {
   animation: showup 0.7s;
+}
+
+p a {
+  font-style: italic;
+  text-decoration: underline;
+}
+
+footer a {
+  font-style: unset;
+  text-decoration: none;
 }
 
 header nav {
@@ -151,4 +141,8 @@ nav::-webkit-scrollbar {
     opacity: 1;
     transform: none;
   }
+}
+
+.home-intro {
+  line-height: 1.65;
 }

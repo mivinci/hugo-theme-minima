@@ -27,7 +27,7 @@ subtitle = ""
 # Comment decides the comment plugin to be used on your blog site, 
 # e.g. disqus, utterances, ovo.
 comment = "utterances"
-# timeformat 
+# timeformat, no matter what format to use, make it the second day of Jan. 2006
 timeformat = "Jan 02, 2006"
 # switch for turning on/off lights.
 switch = ["🌚", "🌝"]
@@ -37,7 +37,7 @@ displayDate = true
 selectable = true
 # custom global font. notice: `globalFontFamily` won't be working
 # on texts in some special positions like on titles
-globalFontFamily = 'Helvatica, sans-serif'
+globalFontFamily = 'Helvatica sans-serif'
 
 # Disqus configuration
 [params.disqus]
