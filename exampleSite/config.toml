@@ -27,17 +27,20 @@ subtitle = ""
 # Comment decides the comment plugin to be used on your blog site, 
 # e.g. disqus, utterances, ovo.
 comment = "utterances"
-# timeformat, no matter what format to use, make it the second day of Jan. 2006
+# Timeformat, no matter what format to use, make it the second day of Jan. 2006
 timeformat = "Jan 02, 2006"
 # switch for turning on/off lights.
 switch = ["🌚", "🌝"]
-# if true, date of posts will be displayed in the homepage.
+# If set true, date of posts will be displayed in the homepage.
 displayDate = true
-# if true, users can select text from your post.
+# If set true, users can select text from your post.
 selectable = true
-# custom global font. notice: `globalFontFamily` won't be working
+# Custom global font. notice: `globalFontFamily` won't be working
 # on texts in some special positions like on titles
 globalFontFamily = 'Helvatica sans-serif'
+# If set true, all your posts will use the chosen comment plugin
+# except those with a `comment: false` in their front-matter
+commentOnAllPosts = false
 
 # Disqus configuration
 [params.disqus]

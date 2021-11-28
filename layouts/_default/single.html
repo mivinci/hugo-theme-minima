@@ -36,16 +36,17 @@
 {{ partial "mermaid.html" . }}
 {{ end }}
 
-{{ if and .Params.comment (eq .Site.Params.comment "disqus")}}
-{{ partial "disqus.html" . }}
-{{ end }}
+{{ if and .Site.Params.commentOnAllPosts (ne .Params.comment false) }}
+	{{ if eq .Site.Params.comment "disqus"}}
+	{{ partial "disqus.html" . }}
+	{{ end }}
 
-{{ if and .Params.comment (eq .Site.Params.comment "ovo")}}
-{{ partial "ovo.html" . }}
-{{ end }}
+	{{ if eq .Site.Params.comment "ovo"}}
+	{{ partial "ovo.html" . }}
+	{{ end }}
 
-{{ if and .Params.comment (eq .Site.Params.comment "utterances")}}
-{{ partial "utterances.html" . }}
+	{{ if eq .Site.Params.comment "utterances"}}
+	{{ partial "utterances.html" . }}
+	{{ end }}
 {{ end }}
-
 {{ end }}
