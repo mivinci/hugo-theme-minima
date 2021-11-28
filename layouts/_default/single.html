@@ -36,7 +36,7 @@
 {{ partial "mermaid.html" . }}
 {{ end }}
 
-{{ if and .Site.Params.commentOnAllPosts (ne .Params.comment false) }}
+{{ if or .Params.comment (and .Site.Params.commentOnAllPosts (ne .Params.comment false)) }}
 	{{ if eq .Site.Params.comment "disqus"}}
 	{{ partial "disqus.html" . }}
 	{{ end }}
