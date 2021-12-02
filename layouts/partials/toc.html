@@ -1,6 +1,26 @@
-<details class="toc mt-8">
-  <summary>Table of Contents</summary>
-  <div>
+{{ if eq .Site.Params.toc "default" }}
+<details class="toc toc-default">
+  <summary></summary>
+  <div class="pb-1">
     {{ .TableOfContents }}
   </div>
 </details>
+{{ end }}
+
+{{ if eq .Site.Params.toc "bar" }}
+<details class="toc toc-bar">
+  <summary></summary>
+  <div class="pb-1">
+    {{ .TableOfContents }}
+  </div>
+</details>
+{{ end }}
+
+{{ if eq .Site.Params.toc "lines" }}
+<details class="toc toc-lines">
+  <summary></summary>
+  <div class="pb-1">
+    {{ .TableOfContents }}
+  </div>
+</details>
+{{ end }}

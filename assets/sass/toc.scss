@@ -1,0 +1,89 @@
+details.toc {
+  position: sticky;
+  top: 0;
+  background-color: var(--bg);
+  transition: .5s all;
+}
+
+details.toc summary {
+  position: relative;
+  width: fit-content;
+  cursor: pointer;
+  background-color: var(--bg);
+  transition: .5s all;
+}
+
+details.toc div {
+  background-color: var(--bg);
+  transition: .5s all;
+}
+
+details.toc ul {
+  list-style-type: none;
+  padding-inline-start: 1em;
+  margin: 0;
+}
+
+details.toc ul > li {
+  margin: 1em 0;
+}
+
+details.toc-bar,
+details.toc-lines {
+  & summary {
+    padding-right: 0.5em;
+    list-style: none;
+  }
+  & summary::-webkit-details-marker {
+    display: none;
+  }
+  & div {
+    padding-top: 1em;
+  }
+}
+
+details.toc-bar {
+  top: 1rem;
+  background-color: transparent;
+
+  & div {
+    top: -1em;
+    padding-top: 2em;
+    background-color: var(--bg);
+  }
+
+  & summary {
+    --toc-bar-ht: 4px;
+    --toc-bar-wd: 8%;
+    width: var(--toc-bar-wd);
+    height: var(--toc-bar-ht);
+    margin-left: calc(50% - var(--toc-bar-wd) / 2);
+    border-radius: calc(var(--toc-bar-ht) / 2);
+    background-color: var(--ft);
+    box-shadow: var(--bg) 0 0 8px 8px;
+  }
+}
+
+details.toc-default,
+details.toc-lines {
+  & summary {
+    padding-top: 1em;
+  }
+}
+
+details.toc-lines {
+  & summary::before {
+    content: "≡";
+    font-size: 1.5em;
+    position: relative;
+    top: 0;
+  }
+}
+
+details[open] {
+  &.toc-lines summary::before {
+    content: "×";
+    font-size: 1.7em;
+    top: -4px;
+  }
+}

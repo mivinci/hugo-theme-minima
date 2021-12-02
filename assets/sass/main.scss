@@ -1,6 +1,7 @@
 @import "atom.scss";
 @import "markdown.scss";
 @import "syntax.scss";
+@import "toc.scss";
 
 :root {
   --pm: #0fa0ce;
@@ -97,16 +98,6 @@ footer a {
 
 header nav {
   color: var(--tag);
-}
-
-details.toc ul {
-  list-style-type: none;
-  padding-inline-start: 1em;
-  margin: 0;
-}
-
-details.toc ul > li {
-  margin: 1em 0;
 }
 
 ::-webkit-scrollbar {

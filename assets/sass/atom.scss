@@ -36,6 +36,14 @@ $screens: (
     margin-left: $size;
     margin-right: $size;
   }
+
+  .#{$prefix}pb-#{$scale} {
+    padding-bottom: $size;
+  }
+  .#{$prefix}py-#{$scale} {
+    padding-top: $size;
+    padding-bottom: $size;
+  }
 }
 
 @each $scale in $scales {
