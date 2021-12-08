@@ -16,13 +16,17 @@
 }
 
 .md table thead {
-  background-color: var(--bd);
+  border-top: 2px solid var(--ft);
+  border-bottom: 1px solid var(--ft);
+}
+
+.md table tbody {
+  border-bottom: 2px solid var(--ft);
 }
 
 .md table th, 
 .md table td {
   padding: 10px 20px;
-  border-bottom: 1px solid var(--bd);
 }
 
 .md img {
