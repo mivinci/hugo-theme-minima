@@ -8,7 +8,7 @@
 .md table {
   border-collapse: collapse;
   border-spacing: 0;
-  display: block;
+  display: table;
   max-width: 100%;
   width: 100%;
   margin: 1em 0;
@@ -22,7 +22,7 @@
 .md table th, 
 .md table td {
   padding: 10px 20px;
-  border-bottom: 1px solid var(--bd);
+  border: 1px solid var(--bd);
 }
 
 .md img {
