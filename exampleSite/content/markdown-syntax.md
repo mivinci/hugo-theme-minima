@@ -94,21 +94,60 @@ Tables aren't part of the core Markdown spec, but Hugo supports supports them ou
     </body>
     </html>
 
-#### Code block with Hugo's internal highlight shortcode
+#### Code block with Golang
 
-{{< highlight html >}}
-<!doctype html>
+```go
+type Registry interface {
+    Register(*Service, ...RegisterOption) error
+    Deregister(*Service, ...DeregisterOption) error
+    GetService(string, ...GetOption) ([]*Service, error)
+}
+```
 
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Example HTML5 Document</title>
-</head>
-<body>
-  <p>Test</p>
-</body>
-</html>
-{{< /highlight >}}
+#### Code block with C艹
+
+```c++
+#include <iostream>
+
+class Animal {
+    string name;
+public:
+    void eat();
+}
+
+void Animal::eat() {
+    std::cout << "eat something" << std::endl;
+}
+```
+
+#### Code block with Java
+
+```java
+class Animal {
+    void speak() { /* speak */ }
+}
+
+class Dog extends Animal {
+    @override
+    void speak() { /* bark */ }
+}
+
+class Cat extends Animal {
+    @override
+    void speak() { /* mew */ } 
+}
+```
+
+#### Code block with Python
+
+```python
+class Dog(Animal):
+    def __init__(self):
+        super.__init__()
+    
+    def eat():
+        pass
+```
 
 ## List Types
 
