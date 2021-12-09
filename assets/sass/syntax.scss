@@ -34,6 +34,10 @@ pre {
   display: block;
 }
 
+.chroma .lntable tbody {
+  border: 0;
+}
+
 /* LineNumbersTable */
 .chroma .lnt {
   color: #999;
