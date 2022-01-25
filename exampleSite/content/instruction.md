@@ -2,10 +2,12 @@
 author: Hugo Authors
 title: Instruction
 date: 2021-07-19T10:52:59+08:00
-description: A Clean and minimal Hugo theme porting from Minima on Hexo. [Click me](https://h.xjj.pub/) to take a look at the demo site.
+description: A Clean and minimal Hugo theme porting from the [Hexo Minima](https://github.com/adisaktijrs/hexo-theme-minima). [Click me](https://h.xjj.pub/) to take a look.
 math: true
 comment: true
 ---
+
+> The main branch is in development stage, UI or configurations may vary. You can use the latest stable version [here](https://github.com/Mivinci/hugo-theme-minima/releases/tag/v1.0.0).
 
 ## Features
 
@@ -19,7 +21,7 @@ comment: true
 
 ## Usage
 
-Before using Minima, make sure you've got Hugo(v0.41.0 or higher) installed on your device.
+Before using Minima, make sure you've got Hugo (extended version) installed on your device.
 
 ### Installation
 
@@ -46,7 +48,7 @@ Follow [exampleSite/config.toml](https://github.com/Mivinci/hugo-theme-minima/bl
 ### Supported Front Matters
 
 | Field       | Type   | Explanation                                            |
-|:----------- |:------ |:------------------------------------------------------ |
+| ----------- | ------ | ------------------------------------------------------ |
 | title       | string | Title of the post, will be rendered in a `h1` tag      |
 | description | string | Description of the post, will be rendered in a `p` tag |
 | date        | string | Datetime that the post is written                      |
