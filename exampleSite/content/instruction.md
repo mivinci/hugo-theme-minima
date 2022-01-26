@@ -7,7 +7,7 @@ math: true
 comment: true
 ---
 
-> The main branch is in development stage, UI or configurations may vary. You can use the latest stable version [here](https://github.com/Mivinci/hugo-theme-minima/releases/tag/v1.0.0).
+> The main branch is in development stage, UI or configurations may vary. You can use the latest stable version [here](https://github.com/Mivinci/hugo-theme-minima/releases/tag/v1.1.0).
 
 ## Features
 
