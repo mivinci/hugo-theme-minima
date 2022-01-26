@@ -11,13 +11,14 @@ comment: true
 
 ## Features
 
+- [x] Clean
 - [x] Light/dark mode
-- [x] VSCode-style code hightlighting
+- [x] VSCode-style code hightlighting (the most alike among all Hugo themes)
 - [x] KaTeX
-- [x] Mermaid
+- [x] Mermaid diagrams
 - [x] Google analytics
-- [x] Disqus/Utterances comments
-- [x] Optional ToC 
+- [x] Disqus/Utterances
+- [x] Optional ToC
 
 ## Usage
 
@@ -49,16 +50,16 @@ Follow [exampleSite/config.toml](https://github.com/Mivinci/hugo-theme-minima/bl
 
 | Field       | Type   | Explanation                                            |
 |:----------- |:------ |:------------------------------------------------------ |
-| title       | string | Title of the post, <br> will be rendered in a `h1` tag      |
-| description | string | Description of the post, will be rendered in a `p` tag |
-| date        | string | Datetime that the post is written                      |
+| title       | string | Title of the post                                      |
+| description | string | Description of the post                                |
+| date        | string | Datetime when the post is written                      |
 | categories  | array  | Array of categories the posts belongs to               |
 | series      | array  | Array of series the post belongs to                    |
 | tags        | array  | Array of tags the posts is related to                  |
 | math        | bool   | True if the post needs to render math formulas         |
-| mermaid     | bool   | True if the post needs to render mermaid graphs        |
+| mermaid     | bool   | True if the post needs to render mermaid diagrams      |
 | comment     | bool   | True if the post allows people to make comments        |
-| draft       | bool   | True if the post isn't already to production           |
+| draft       | bool   | True if the post isn't already for publishing          |
 | toc         | bool   | True if the post needs a ToC                           |
 
 ### Feedback

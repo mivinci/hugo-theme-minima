@@ -12,7 +12,7 @@
 
   --w-mobile: 640px;
 
-  --global-font-family: Verdana, Geneva, Tahoma, sans-serif;
+  --global-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 html.dark {
@@ -29,9 +29,9 @@ html.dark {
 }
 
 body {
-  font-family: var(--global-font-family);
   max-width: var(--w-mobile);
   margin: 3rem auto 0;
+  font-family: var(--global-font-family);
   font-size: 16px;
   font-weight: 400;
   color: var(--ft);

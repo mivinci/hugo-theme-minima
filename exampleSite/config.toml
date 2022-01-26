@@ -41,7 +41,7 @@ displayDate = true
 selectable = true
 # Custom global font. notice: `globalFontFamily` won't be working
 # on texts in some special positions like on titles
-globalFontFamily = 'LXGW WenKai'
+globalFontFamily = ""
 # If set true, all your posts will use the chosen comment plugin
 # except those with a `comment: false` in their front-matter
 commentOnAllPosts = true

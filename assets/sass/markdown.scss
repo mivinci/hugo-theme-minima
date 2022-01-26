@@ -1,7 +1,7 @@
 .md blockquote {
   background-color: rgba(148, 148, 149, 0.08) ;
   padding: 1px 1rem;
-  border-left: 8px solid var(--pm);
+  border-left: 4px solid var(--pm);
   font-style: italic;
 }
 
@@ -56,6 +56,12 @@
 .md blockquote,
 .md .highlight {
   margin: .75rem 0;
+}
+
+.md blockquote p {
+  margin: .5rem 0;
+  line-height: 1.5;
+  font-size: .9rem;
 }
 
 .md hr {
