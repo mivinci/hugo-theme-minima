@@ -8,13 +8,14 @@ A Clean and minimal Hugo theme porting from the [Hexo Minima](https://github.com
 
 ## Features
 
+- [x] Clean
 - [x] Light/dark mode
-- [x] VSCode-style code hightlighting
+- [x] VSCode-style code hightlighting (the most alike among all Hugo themes)
 - [x] KaTeX
-- [x] Mermaid
+- [x] Mermaid diagrams
 - [x] Google analytics
-- [x] Disqus/Utterances comments
-- [x] Optional ToC 
+- [x] Disqus/Utterances
+- [x] Optional ToC
 
 ## Usage
 

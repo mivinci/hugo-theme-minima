@@ -48,8 +48,8 @@ Follow [exampleSite/config.toml](https://github.com/Mivinci/hugo-theme-minima/bl
 ### Supported Front Matters
 
 | Field       | Type   | Explanation                                            |
-| ----------- | ------ | ------------------------------------------------------ |
-| title       | string | Title of the post, will be rendered in a `h1` tag      |
+|:----------- |:------ |:------------------------------------------------------ |
+| title       | string | Title of the post, <br> will be rendered in a `h1` tag      |
 | description | string | Description of the post, will be rendered in a `p` tag |
 | date        | string | Datetime that the post is written                      |
 | categories  | array  | Array of categories the posts belongs to               |

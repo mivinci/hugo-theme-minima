@@ -1,7 +1,7 @@
 baseURL = "http://h.xjj.pub"
 languageCode = "en-us"
 title = "Hi Folks"
-copyright = "© XJJ 2021"
+copyright = "© XJJ 2022"
 googleAnalytics = ""
 
 # paginate decides the number of the newest posts
@@ -17,7 +17,7 @@ theme = "hugo-theme-minima"
 [author]
 name = "XJJ"
 slogon = "A tech lover from Earth 🌍"
-description = "This is Minima, a clean and minimal Hugo theme porting from the [Hexo Minima](https://github.com/adisaktijrs/hexo-theme-minima). Except for everything from Hexo Minima like dark/light mode, it supports KaTeX, Mermaid, comments and some taxonomies like categories, series and tags. I created this using SCSS, Vanilla JS and the most important, Hugo. 😁"
+description = "This is Minima, a clean and minimal Hugo theme porting from the [Hexo Minima](https://github.com/adisaktijrs/hexo-theme-minima). Except for everything from Hexo Minima like dark/light mode, Hugo Minima supports KaTeX, Mermaid, comments and some taxonomies like categories, series and tags. I created this using SASS, VanillaJS and the most importantly, Hugo. 😁"
 
 
 [params]
@@ -63,8 +63,8 @@ issueTerm = "pathname"
 # **deprecated**
 # OvO is a comment plugin written by the author of Minima.
 # It is enabled when params.comment is set "ovo". You can
-# find its documentation on https://github.com/ovojs/ovo.
-# If you are using disqus or utterance, just ignore this field.
+# have a live view on https://ovo.js.org. If you are using 
+# disqus or utterance, just ignore this.
 [params.ovo]
 server = ""
 placeholder = ""
@@ -130,9 +130,8 @@ tag = "tags"
 series = "series"
 
 
-# Fields below makes sure all the codes in a post are
+# Fields below make sure all the codes in a post are
 # highlighted correctly, so better not edit them.
 [markup.highlight]
 lineNos = true
 noClasses = false
-  
