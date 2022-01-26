@@ -33,6 +33,8 @@ comment = "utterances"
 timeformat = "Jan 02, 2006"
 # switch for turning on/off lights.
 switch = ["🌚", "🌝"]
+# default theme. e.g. light, dark, system
+defaultTheme = "system"
 # If set true, date of posts will be shown in the homepage.
 displayDate = true
 # If set true, users can select text from your post.

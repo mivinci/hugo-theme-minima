@@ -29,12 +29,25 @@
   <script defer type="text/javascript" src="{{ $js.RelPermalink }}"></script>
 </head>
 <script>
+  // We will default to system theme color if no choice was made.
+  let theme_2b_used = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+
   try {
     if (!('theme' in localStorage)) {
-      localStorage.theme = window.matchMedia('(prefer-color-scheme: dark)').matches ? 'dark' : 'light';
+      const default_theme = '{{ .Site.Params.defaultTheme }}';
+      
+      // For the first time entering this site, use the theme picked by the author.
+      if (default_theme === 'dark' || default_theme === 'light') {
+        theme_2b_used = default_theme;
+      }
+
+      // Remember the choice.
+      localStorage.theme = theme_2b_used;
     }
+    
     document.querySelector('html').classList.add(localStorage.theme);
   } catch (e) {
     console.error(e);
   }
 </script>
+
