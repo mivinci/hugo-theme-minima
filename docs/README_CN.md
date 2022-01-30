@@ -14,6 +14,7 @@ Minima 是个简洁但功能完整的 Hugo 主题，是 [Hexo Minima](https://gi
 - [x] Disqus、Utterances 评论插件（即将支持 Waline）
 - [x] 文章目录
 - [x] 分类、标签、专栏
+- [x] 外部链接 
 
 ## 使用
 
@@ -70,7 +71,7 @@ git clone https://github.com/mivinci/hugo-theme-minima.git themes/minima
 
 可在 front matter 中通过设置 `link` 来创建外部链接。
 
-**Example**
+**示例**
 
 ```yaml
 ---
@@ -85,4 +86,4 @@ link: https://gohugo.io
 
 ### 反馈
 
-欢迎在 [issues](https://github.com/Mivinci/hugo-theme-minima/issues) 下留言，或将问题详细描述发送到我的邮箱：mivinci@qq.com
+欢迎在 [issues](https://github.com/Mivinci/hugo-theme-minima/issues) 下留言，或将问题详细描述发送到我的邮箱：i@xjj.pub

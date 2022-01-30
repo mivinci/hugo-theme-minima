@@ -1,8 +1,8 @@
 # Minima
 
-A Clean and minimal Hugo theme porting from the [Hexo Minima](https://github.com/adisaktijrs/hexo-theme-minima). [Click me](https://h.xjj.pub/) to take a look at the demo site.
+A Hugo port of [Hexo Minima](https://github.com/adisaktijrs/hexo-theme-minima). [Demo site](https://h.xjj.pub/).
 
-> The main branch is in development stage, UI or configurations may vary. You can use the latest stable version [here](https://github.com/Mivinci/hugo-theme-minima/releases/tag/v1.1.0).
+> The main branch is in development stage, UI or configuration may vary. You can use the latest stable version [here](https://github.com/Mivinci/hugo-theme-minima/releases/tag/v1.1.0).
 
 ![screenshot](./images/tn.png)
 
@@ -16,6 +16,7 @@ A Clean and minimal Hugo theme porting from the [Hexo Minima](https://github.com
 - [x] Google analytics
 - [x] Disqus/Utterances
 - [x] Optional ToC
+- [x] External link post
 
 ## Usage
 
