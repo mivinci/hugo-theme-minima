@@ -50,6 +50,7 @@ Follow [exampleSite/config.toml](https://github.com/Mivinci/hugo-theme-minima/bl
 | title       | string | Title of the post                                      |
 | description | string | Description of the post                                |
 | date        | string | Datetime when the post is written                      |
+| link        | string | If set, the post will redirect to an external link     |
 | categories  | array  | Array of categories the posts belongs to               |
 | series      | array  | Array of series the post belongs to                    |
 | tags        | array  | Array of tags the posts is related to                  |
@@ -58,6 +59,23 @@ Follow [exampleSite/config.toml](https://github.com/Mivinci/hugo-theme-minima/bl
 | comment     | bool   | True if the post allows people to make comments        |
 | draft       | bool   | True if the post isn't already for publishing          |
 | toc         | bool   | True if the post needs a ToC                           |
+
+### External Link Post
+
+Use the `link` in the front matter to make a post a specific external link. Such external link post will redirect to the link provided.
+
+**Example**
+
+```yaml
+---
+author: XJJ
+title: External Link Post
+date: 2021-07-17T10:52:59+08:00
+link: https://gohugo.io
+---
+```
+
+And when you click the title in the list page, you will be redireted to https://gohugo.io which's 🆒.
 
 ### Feedback
 

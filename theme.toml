@@ -7,7 +7,7 @@ licenselink = "https://github.com/mivinci/minima/blob/master/LICENSE"
 description = "A Hugo port of Hexo Minima"
 homepage = "https://github.com/mivinci/hugo-theme-minima"
 tags = ["minimal", "clean", "blog", "responsive", "personal", "simple", "minimalist", "portfolio", "dark"]
-features = ["Dark mode", "KaTeX", "Mermaid", "VSCode-style code highlighting"]
+features = ["Dark mode", "KaTeX", "Mermaid", "VSCode-style code highlighting", "External link post"]
 min_version = "0.41.0"
 
 [author]
