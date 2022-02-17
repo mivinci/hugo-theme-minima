@@ -97,6 +97,16 @@ name = "rss"
 url = "/index.xml"
 svg = ""
 
+# If set, titles and links of the topk newest posts extracted from 
+# the feeds will be displayed in the home page. Note that the feeds
+# providers have to make their 'Access-Control-Allow-Origin' contain
+# your domain, otherwise the feeds cannot be fetched.
+[params.friends]
+feeds = ["https://is.boxmoe.cn/atom.xml", "https://xiabor.com/atom.xml"]
+topk = 3
+title = "Friends' Posts"
+
+
 
 # Menu.main is an array that's used to decide what entries can be shown
 # on the navigator of yur blog. You can use a weight to make them ordered.
