@@ -15,7 +15,9 @@
 			{{ end }}
 			{{ partial "paginator.html" . }}
 		</div>
+		{{ if .Site.Params.friends.feeds }}
 		<h3 class="my-6">{{ .Site.Params.friends.title }}</h3>
 		<div id="friends"></div>
+		{{ end }}
 	</main>
 {{ end }}
