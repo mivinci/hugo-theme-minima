@@ -105,7 +105,7 @@ svg = ""
 feeds = ["https://xjj.pub/index.xml"]
 topk = 3
 title = "Friends' Posts"
-
+proxy = "" # reserved
 
 
 # Menu.main is an array that's used to decide what entries can be shown

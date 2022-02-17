@@ -1,6 +1,10 @@
 # Minima
 
-A Hugo port of [Hexo Minima](https://github.com/adisaktijrs/hexo-theme-minima). [Demo site](https://h.xjj.pub/).
+This project was originally a Hugo port of the [Hexo Minima](https://github.com/adisaktijrs/hexo-theme-minima). A lot of changes have been made so far to make Minima cooler.
+
+
+Links: [Demo Site](https://h.xjj.pub/), [Demo Configs](../exampleSite/), [Author's Blog](https://xjj.pub)
+
 
 > The main branch is in development stage, UI or configuration may vary. You can use the latest stable version [here](https://github.com/Mivinci/hugo-theme-minima/releases/tag/v1.1.0).
 
@@ -17,6 +21,7 @@ A Hugo port of [Hexo Minima](https://github.com/adisaktijrs/hexo-theme-minima). 
 - [x] Disqus/Utterances
 - [x] Optional ToC
 - [x] External link post
+- [x] RSS
 
 ## Usage
 
@@ -76,7 +81,20 @@ link: https://gohugo.io
 ---
 ```
 
-And when you click the title in the list page, you will be redireted to https://gohugo.io which's 🆒.
+And when you click the title in the list page, you will be redireted to https://gohugo.io, which's 🆒.
+
+### RSS Feeds
+
+v1.1.0 and later versions support subscription to external RSS feeds whereas titles and links to your friends' posts can be displayed in your blog site. For details, see `friends` in the [configuaration](./exampleSite/config.toml)
+
+**Example**
+
+```yaml
+[params.friends]
+feeds = ["https://xjj.pub/index.xml"]
+topk = 3
+title = "Friends' Posts"
+```
 
 ### Feedback
 

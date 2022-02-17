@@ -1,6 +1,8 @@
 # Minima
 
-Minima 是个简洁但功能完整的 Hugo 主题，是 [Hexo Minima](https://github.com/adisaktijrs/hexo-theme-minima) 的 Hugo 版本，但对其界面做了些调整，也添加了些功能.。示例网页：[h.xjj.pub](https://h.xjj.pub/)，或直接查看作者的博客网站：[xjj.pub](https://xjj.pub)。
+Minima 是个简洁但功能完整的 Hugo 主题，原本是 [Hexo Minima](https://github.com/adisaktijrs/hexo-theme-minima) 主题的 Hugo 版本，现在已经在其设计行上做了多处调整，和添加新的功能。
+
+链接：[示例网页](https://h.xjj.pub/)，[示例配置](../exampleSite/config.toml)，[作者博客](https://xjj.pub)
 
 ![screenshot](../images/tn.png)
 
@@ -15,6 +17,7 @@ Minima 是个简洁但功能完整的 Hugo 主题，是 [Hexo Minima](https://gi
 - [x] 文章目录
 - [x] 分类、标签、专栏
 - [x] 外部链接 
+- [x] RSS
 
 ## 使用
 
@@ -83,6 +86,19 @@ link: https://gohugo.io
 ```
 
 当点击改文章题目时，会跳转到设置的链接地址 https://gohugo.io，🆒
+
+### RSS Feeds
+
+v1.1.0 版本之后，Minima 支持订阅 RSS Feeds，因此你可以用来在自己的博客上显示别人的文章标题和链接。详情见 [示例配置](./exampleSite/config.toml) 的 `friends` 部分。
+
+**示例**
+
+```yaml
+[params.friends]
+feeds = ["https://xjj.pub/index.xml"]
+topk = 3
+title = "Friends' Posts"
+```
 
 ### 反馈
 
