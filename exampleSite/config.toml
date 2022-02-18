@@ -102,7 +102,7 @@ svg = ""
 # providers have to make their 'Access-Control-Allow-Origin' contain
 # your domain, otherwise the feeds cannot be fetched.
 [params.friends]
-feeds = ["https://xjj.pub/index.xml"]
+feeds = ["https://h.xjj.pub/index.xml"]
 topk = 3
 title = "Friends' Posts"
 proxy = "" # reserved
