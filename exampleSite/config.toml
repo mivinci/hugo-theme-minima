@@ -69,6 +69,21 @@ issueTerm = "pathname"
 server = ""
 placeholder = ""
 
+# Giscus configuration
+# Full doc's at https://giscus.app/
+[params.giscus]
+enable = false  # 
+data_repo="[ENTER REPO HERE]"
+data_repo_id="[ENTER REPO ID HERE]"
+data_category="[ENTER CATEGORY NAME HERE]"
+data_category_id="[ENTER CATEGORY ID HERE]"
+data_mapping="pathname"
+data_reactions_enabled="1"
+data_emit_metadata="0"
+data_theme="light"
+data-loading="lazy"
+data_lang="en"
+crossorigin="anonymous"
 
 # Params.social is an array containing your social network accounts,
 # Each has a lowercase name, a svg formatted icon and a url to the 
