@@ -72,7 +72,7 @@ placeholder = ""
 # Giscus configuration
 # Full doc's at https://giscus.app/
 [params.giscus]
-enable = false  # 
+enable = false
 data_repo="[ENTER REPO HERE]"
 data_repo_id="[ENTER REPO ID HERE]"
 data_category="[ENTER CATEGORY NAME HERE]"
