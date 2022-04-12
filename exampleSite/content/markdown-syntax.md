@@ -96,7 +96,7 @@ Tables aren't part of the core Markdown spec, but Hugo supports supports them ou
 
 #### Code block with Golang
 
-```go
+```go {hl_lines=[3]}
 type Registry interface {
     Register(*Service, ...RegisterOption) error
     Deregister(*Service, ...DeregisterOption) error
