@@ -1,0 +1,17 @@
+<script>
+  const repo = '{{ .Site.Params.utterances.repo }}'
+  const issueTerm = '{{ .Site.Params.utterances.issueTerm }}'
+  const theme = localStorage.theme ? `github-${localStorage.theme}` : 'preferred-color-scheme';
+
+  const script = document.createElement('script')
+  script.src = 'https://utteranc.es/client.js'
+  script.async = true
+  script.crossOrigin = 'anonymous'
+
+  script.setAttribute('repo', repo)
+  script.setAttribute('issue-term', issueTerm)
+  script.setAttribute('theme', theme)
+  script.setAttribute('label', 'comment')
+
+  document.querySelector('main').appendChild(script)
+</script>

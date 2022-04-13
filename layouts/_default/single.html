@@ -5,9 +5,9 @@
 <h1 class="mt-6 mb-6">{{ .Title }}</h1>
 <div class="mb-3 text-xs flex justify-between sm:flex-col">
 	<div>
-	{{ if .Site.Params.displayDate }}
+		{{ if .Site.Params.displayDate }}
 		Posted at &mdash; {{ dateFormat .Site.Params.timeformat .Date }}
-	{{ end }}
+		{{ end }}
 		{{ if .Draft }}
 		<span class="ml-3 minima-tag">
 			DRAFT
@@ -37,16 +37,6 @@
 {{ end }}
 
 {{ if or .Params.comment (and .Site.Params.commentOnAllPosts (ne .Params.comment false)) }}
-	{{ if eq .Site.Params.comment "disqus"}}
-	{{ partial "disqus.html" . }}
-	{{ end }}
-
-	{{ if eq .Site.Params.comment "ovo"}}
-	{{ partial "ovo.html" . }}
-	{{ end }}
-
-	{{ if eq .Site.Params.comment "utterances"}}
-	{{ partial "utterances.html" . }}
-	{{ end }}
+	{{ partial "comment.html" . }}
 {{ end }}
 {{ end }}
