@@ -48,6 +48,9 @@ commentOnAllPosts = true
 # toc decides the shape of the toc button. e.g. default, lines, bar
 toc = "lines"
 
+recent = "Recent Posts"
+older = "Older Posts"
+
 # Disqus configuration
 [params.disqus]
 shortname = "hugo-minima"
