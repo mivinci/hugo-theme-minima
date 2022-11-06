@@ -62,6 +62,7 @@ shortname = "hugo-minima"
 [params.utterances]
 repo = "mivinci/hugo-theme-minima"
 issueTerm = "pathname"
+label = "comment"
 
 # **deprecated**
 # OvO is a comment plugin written by the author of Minima.
