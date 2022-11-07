@@ -1,7 +1,7 @@
-baseURL = "http://h.xjj.pub"
+baseURL = "https://mivinci.github.io/hugo-theme-minima"
 languageCode = "en-us"
 title = "Hi Folks"
-copyright = "© XJJ 2022"
+copyright = "© 2022 Mivinci"
 googleAnalytics = ""
 
 # paginate decides the number of the newest posts
@@ -15,7 +15,7 @@ theme = "hugo-theme-minima"
 
 # Author has some of your information to be shown on the home page.
 [author]
-name = "XJJ"
+name = "Mivinci"
 slogon = "A tech lover from Earth 🌍"
 description = "This is Minima, a clean and minimal Hugo theme porting from the [Hexo Minima](https://github.com/adisaktijrs/hexo-theme-minima). Except for everything from Hexo Minima like dark/light mode, Hugo Minima supports KaTeX, Mermaid, comments and some taxonomies like categories, series and tags. I created this using SASS, VanillaJS and the most importantly, Hugo. 😁"
 
@@ -43,7 +43,7 @@ selectable = true
 # on texts in some special positions like on titles
 globalFontFamily = ""
 # If set true, all your posts will use the chosen comment plugin
-# except those with a `comment: false` in their front-matter
+# except those with a `comment: false` specified in their front-matter
 commentOnAllPosts = true
 # toc decides the shape of the toc button. e.g. default, lines, bar
 toc = "lines"
@@ -94,7 +94,7 @@ url = "https://linkedin/in/leonard-mivinci-63895317a"
 svg = ""
 [[params.social]]
 name = "twitter"
-url = "https://twitter.com/Leonard14733745"
+url = "https://twitter.com/realmivinci"
 svg = ""
 [[params.social]]
 name = "rss"
@@ -106,7 +106,7 @@ svg = ""
 # providers have to make their 'Access-Control-Allow-Origin' contain
 # your domain, otherwise the feeds cannot be fetched.
 [params.friends]
-feeds = ["https://h.xjj.pub/index.xml"]
+feeds = []
 topk = 3
 title = "Friends' Posts"
 proxy = "" # reserved
@@ -119,8 +119,8 @@ name = "Home"
 url = "/"
 weight = 1
 [[menu.main]]
-name = "Categories"
-url = "/categories"
+name = "Tags"
+url = "/tags"
 weight = 2
 [[menu.main]]
 name = "Series"
@@ -149,3 +149,12 @@ series = "series"
 [markup.highlight]
 lineNos = true
 noClasses = false
+
+
+defaultContentLanguage = "en"
+[languages.en]
+languageName = "EN"
+weight = 1
+[languages.zh]
+languageName = "ZH"
+weight = 2

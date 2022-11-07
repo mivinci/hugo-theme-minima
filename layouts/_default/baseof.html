@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 {{ partial "head.html" . }}
-<body class=" sm:mx-5 sm:my-0">
+
+<body class="sm:mx-5 sm:my-0">
   {{ partial "header.html" . }}
-  
+
   {{ block "main" . }} {{ end }}
 
   {{ partial "footer.html" . }}
 </body>
+
 </html>

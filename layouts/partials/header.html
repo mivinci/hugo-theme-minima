@@ -1,14 +1,23 @@
-<header class="flex justify-between items-center mb-6 sm:my-3">
-  <div class="flex items-center">
-    {{ if .Site.Params.brand }}
-    <div class="mr-3 text-3xl"><a href="/">{{ .Site.Params.brand }}</a></div>
-    {{ end }}
-    <div id="theme-switcher" class="text-4xl cursor-pointer">{{ index .Site.Params.switch 1 }}</div>
+<header class="sm:my-3 my-6">
+  <div class="container">
+    <nav class="flex justify-between items-center">
+      <div class="flex items-center">
+        {{ if .Site.Params.brand }}
+        <div class="mr-3 text-3xl"><a href="/">{{ .Site.Params.brand }}</a></div>
+        {{ end }}
+        <div id="theme-switcher" class="text-left text-4xl cursor-pointer">{{ index .Site.Params.switch 1 }}</div>
+      </div>
+      <ul class="flex items-center font-medium
+        whitespace-nowrap overflow-x-auto overflow-y-hidden">
+        {{ range .Site.Menus.main }}
+        <li class="mx-2"><a href="{{ .URL | absLangURL }}">{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+      <ul class="flex item-center text-sm font-bold">
+        {{ range $.Site.Home.AllTranslations }}
+        <li class="ml-3"><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
+        {{ end}}
+      </ul>
+    </nav>
   </div>
-  <nav class="flex items-center
-    whitespace-nowrap overflow-x-auto overflow-y-hidden">
-    {{ range .Site.Menus.main }}
-    <a class="ml-5" href="{{ .URL | absLangURL }}">{{ .Name }}</a>
-    {{ end }}
-  </nav>
 </header>

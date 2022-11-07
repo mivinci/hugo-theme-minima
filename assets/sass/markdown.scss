@@ -1,7 +1,7 @@
 .md blockquote {
   background-color: rgba(148, 148, 149, 0.08) ;
   padding: 1px 1rem;
-  border-left: 4px solid var(--pm);
+  border-left: 4px solid var(--prime);
   font-style: italic;
 }
 
@@ -16,12 +16,12 @@
 }
 
 .md table thead {
-  border-top: 2px solid var(--ft);
-  border-bottom: 1px solid var(--ft);
+  border-top: 2px solid var(--text);
+  border-bottom: 1px solid var(--text);
 }
 
 .md table tbody {
-  border-bottom: 2px solid var(--ft);
+  border-bottom: 2px solid var(--text);
 }
 
 .md table th, 

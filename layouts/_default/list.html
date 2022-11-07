@@ -1,5 +1,5 @@
 {{ define "main" }}
-<main>
+<main class="container">
 	{{ if isset .Data "Term" }}
 	<h2 class="my-8">{{ .Data.Singular | title }} - "{{ .Data.Term }}"</h2>
 	{{ else }}

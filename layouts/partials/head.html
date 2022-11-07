@@ -15,18 +15,18 @@
   </title>
   {{ $favicon := "favicon.ico" }}
   <link rel="shortcut icon" href="{{ $favicon | relURL }}" type="image/x-icon" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
   {{ $hash := now.Unix }}
   {{ $options := (dict "targetPath" (printf `minima.%d.css` $hash) "outputStyle" "compressed" "enableSourceMap" true) }}
   {{ $style := resources.Get "sass/main.scss" | resources.ToCSS $options }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}">
-
   {{ $options = (dict "targetPath" (printf `minima.%d.js` $hash) "minify" true) }}
   {{ $js := resources.Get "js/main.js" | js.Build $options | resources.ExecuteAsTemplate (printf `minima.%d.js` $hash) . }}
   <script defer type="text/javascript" src="{{ $js.RelPermalink }}"></script>
+  {{ if .IsTranslated }}
+	{{ range .Translations }}
+	<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
+	{{ end }}
+{{ end }}
 </head>
 <script>
   // We will default to system theme color if no choice was made.

@@ -110,12 +110,14 @@ $screens: (
   }
 }
 
-@include style_with_prefix("");
 @each $screen, $size in $screens {
   @media (max-width: $size) {
     @include style_with_prefix($screen);
   }
 }
+
+@include style_with_prefix("");
+
 
 // border width
 .bw-0 {
@@ -147,4 +149,38 @@ $screens: (
   &:not(:first-child) {
     margin-left: 0.75rem;
   }
+}
+
+
+/* font weight */
+.font-thin {
+  font-weight: 100;
+}
+
+.font-extralight {
+  font-weight: 200;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.text-left {
+  text-align: left;
 }
