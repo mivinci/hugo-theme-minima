@@ -42,7 +42,7 @@ git clone https://github.com/mivinci/hugo-theme-minima.git themes/minima
 
 ### Configuration
 
-Follow [exampleSite/config.toml](https://github.com/Mivinci/hugo-theme-minima/blob/main/exampleSite/config.toml) and edit your own one.
+Follow [exampleSite/config.yaml](https://github.com/Mivinci/hugo-theme-minima/blob/main/exampleSite/config.yaml) and edit your own one.
 
 ## Supported Front Matters
 
