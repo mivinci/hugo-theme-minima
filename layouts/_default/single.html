@@ -35,17 +35,23 @@
   {{ end }}
 
   {{ if or .Params.comment (and .Site.Params.commentOnAllPosts (ne .Params.comment false)) }}
+  
   {{ if eq .Site.Params.comment "disqus"}}
   {{ partial "disqus.html" . }}
-  {{ end }}
-
-  {{ if eq .Site.Params.comment "ovo"}}
-  {{ partial "ovo.html" . }}
   {{ end }}
 
   {{ if eq .Site.Params.comment "utterances"}}
   {{ partial "utterances.html" . }}
   {{ end }}
+
+  {{ if eq .Site.Params.comment "giscus" }}
+  {{ partial "giscus.html" }}
+  {{ end }}
+
+  {{ if eq .Site.Params.comment "ovo"}}
+  {{ partial "ovo.html" . }}
+  {{ end }}
+  
   {{ end }}
 </div>
 {{ end }}

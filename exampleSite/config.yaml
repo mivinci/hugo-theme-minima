@@ -65,11 +65,21 @@ params:
     shortname: hugo-minima
 
   # utterances specifies the configuration for Utterances.
-  # What is Utterances? Check this out: https://utteranc.es
+  # Check out https://utteranc.es for the following three attributes.
   utterances:
-    repo: "mivinci/hugo-theme-minima"
-    issueTerm: "pathname"
-    label: "comment"
+    repo: mivinci/hugo-theme-minima
+    issueTerm: pathname
+    label: comment
+
+  # giscus specifies the configuration for Giscus.
+  # Check out https://giscus.app for the following six attributes.
+  giscus:
+    repo: mivinci/hugo-theme-minima
+    repoId: MDEwOlJlcG9zaXRvcnkzODcxMjM2NDU=
+    category: Comments
+    categoryId: DIC_kwDOFxMJvc4CScQm
+    mapping: pathname
+    inputPostion: buttom
 
   # **DEPRECATED**
   # ovo(https://ovo.js.org) is a comment plugin written by the author of Minima but
