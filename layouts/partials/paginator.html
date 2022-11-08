@@ -2,11 +2,11 @@
 {{ if gt $page.TotalPages 1 }}
 <div class="mt-6 flex justify-between font-semibold">
   {{ if $page.HasPrev }}
-  <a href="{{ $page.Prev.URL }}">← Newer</a>
+  <a href="{{ $page.Prev.URL }}">← {{ T "paginator.prev" }}</a>
   {{ end }}
 
   {{ if $page.HasNext }}
-  <a href="{{ $page.Next.URL }}">Older →</a>
+  <a href="{{ $page.Next.URL }}">{{ T "paginator.next" }} →</a>
   {{ end }}
 </div>
 {{ end }}

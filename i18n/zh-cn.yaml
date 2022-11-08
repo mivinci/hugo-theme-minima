@@ -17,6 +17,12 @@ series:
 timeformat:
   other: 2006 年 1 月 2 日
 
+paginator:
+  prev:
+    other: 上一页
+  next:
+    other: 下一页
+
 post:
   at:
     other: 发布于

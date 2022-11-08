@@ -4,11 +4,29 @@
 name = "Minima"
 license = "MIT"
 licenselink = "https://github.com/mivinci/minima/blob/master/LICENSE"
-description = "A Hugo port of Hexo Minima"
+description = "A clean and minimal Hugo theme"
 homepage = "https://github.com/mivinci/hugo-theme-minima"
-tags = ["minimal", "clean", "blog", "responsive", "personal", "simple", "minimalist", "portfolio", "dark"]
-features = ["Dark mode", "KaTeX", "Mermaid", "VSCode-style code highlighting", "External link post"]
-min_version = "0.41.0"
+tags = [
+    "minimal", 
+    "clean", 
+    "blog", 
+    "responsive", 
+    "personal", 
+    "simple", 
+    "minimalist", 
+    "portfolio", 
+    "dark",
+]
+features = [
+    "Dark mode", 
+    "Multilingual mode", 
+    "KaTeX", 
+    "Mermaid",
+    "Code highlighting", 
+    "External link",
+    "RSS",
+]
+min_version = "0.85.0"
 
 [author]
 name = "Mivinci"

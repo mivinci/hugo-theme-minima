@@ -93,10 +93,6 @@ params:
 # menu.main is an array containing what is used as the navigator.
 menu:
   main:
-    - identifier: home
-      name: "Home"
-      url: "/"
-      weight: 1
     - identifier: tags
       name: "Tags"
       url: "/tags"
@@ -105,10 +101,6 @@ menu:
       name: "Series"
       url: "/series"
       weight: 3
-    - identifier: about
-      name: "About"
-      url: "/about"
-      weight: 4
 
 # taxonomies defines ways to classify yout posts. Below are some presets that
 # most bloggers use, so you can replace them with whatever you like.
