@@ -1,0 +1,125 @@
+baseURL: https://mivinci.github.io/hugo-theme-minima
+languageCode: en-us
+title: Hugo on Minima
+copyright: © 2022 Mivinci
+googleAnalytics:
+# paginate specifies the maximum number of posts displayed on the home page.
+paginate: 12
+# theme specifies the name of the theme to be used.
+theme: hugo-theme-minima
+# defaultContentLanguage specifies the default language to use.
+defaultContentLanguage: en
+# language.x setup
+languages:
+  en:
+    languageName: EN
+    weight: 1
+  zh-cn:
+    languageName: ZH
+    weight: 2
+    author:
+      status: 目前住在地球 🌍
+      description: |
+        这是 Minima, 一个简洁的 Hugo 主题，移植自 [Hexo Minima](https://github.com/adisaktijrs/hexo-theme-minima)。
+        支持深色模式、多语言、数学公式、流程图、代码语法高亮，当然还有分类、标签、系列等等。
+    params:
+      greet: 你好 :)
+
+# author specifies your name, a slogon and your brief self-introduction.
+author:
+  name: Mivinci
+  status: Am currently living on Earth 🌍
+  description: |
+    This is Minima, a clean and minimal Hugo theme porting from 
+    [Hexo Minima](https://github.com/adisaktijrs/hexo-theme-minima). It has supports 
+    for dark mode, multilingual mode, math formulas, flowcharts, syntax highlighting, 
+    and of course taxonomies like categories, tags, and series.
+
+params:
+  # greet specifies greeting words.
+  greet: Hello :)
+  # subtitle speficies a subtitle displayed right after the site title.
+  subtitle:
+  # comment specifies which comment plugin to be used.
+  # currently available ones: disqus, utterances, giscus.
+  comment: utterances
+  # switch specifies two emojis to be used as the button toggling color themes.
+  switch: ["🌚", "🌝"]
+  # defaultTheme specifies a default theme to be used.
+  # currently available options: light, dark, system.
+  defaultTheme: system
+  # displayDate speficies whether or not to display post date on the home page.
+  displayDate: true
+  # displayDescription specifies whether or not to display post description on
+  # the hoem page.
+  displayDescription: true
+  # selectable specifies if your post content can be selected.
+  selectable: true
+  # commentOnAllPosts specifies if the chosen comment plugin to be enabled on all
+  # post pages. If enabled, those you don't want a comment plugin to work on just
+  # set `comment` to false in their front matters.
+  commentOnAllPosts: true
+
+  # disqus specifies the configuration for Disqus.
+  disqus:
+    shortname: hugo-minima
+
+  # utterances specifies the configuration for Utterances.
+  # What is Utterances? Check this out: https://utteranc.es
+  utterances:
+    repo: "mivinci/hugo-theme-minima"
+    issueTerm: "pathname"
+    label: "comment"
+
+  # **DEPRECATED**
+  # ovo(https://ovo.js.org) is a comment plugin written by the author of Minima but
+  # is now deprecated out of security issues.
+  ovo:
+    server: ""
+    placeholder: ""
+
+  # social is an array containing as many as social accounts to be displayed
+  # in the buttom of every page.
+  social:
+    - name: "twitter"
+      url: "https://twitter.com/realmivinci"
+    - name: "email"
+      url: "mailto:mivinci@qq.com"
+    - name: "github"
+      url: "https://github.com/mivinci/hugo-theme-minima"
+    - name: "rss"
+      url: "/index.xml"
+
+# menu.main is an array containing what is used as the navigator.
+menu:
+  main:
+    - identifier: home
+      name: "Home"
+      url: "/"
+      weight: 1
+    - identifier: tags
+      name: "Tags"
+      url: "/tags"
+      weight: 2
+    - identifier: series
+      name: "Series"
+      url: "/series"
+      weight: 3
+    - identifier: about
+      name: "About"
+      url: "/about"
+      weight: 4
+
+# taxonomies defines ways to classify yout posts. Below are some presets that
+# most bloggers use, so you can replace them with whatever you like.
+taxonomies:
+  category: categories
+  tag: tags
+  series: series
+
+# markup.highlight has two keys set to make sure that the syntax highlighting
+# in your posts are rendered correctly, so do not edit them.
+markup:
+  highlight:
+    lineNos: true
+    noClasses: false

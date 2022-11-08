@@ -2,7 +2,7 @@
 author: Hugo Authors
 title: Math Typesetting
 date: 2021-07-18T10:52:59+08:00
-description: A brief guide to setup KaTeX
+description: A brief guide to setup KaTeX.
 math: true
 categories: ["Markdown", "KaTeX"]
 ---

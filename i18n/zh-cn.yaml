@@ -1,0 +1,22 @@
+recent:
+  other: 近期文章
+older:
+  other: 历史文章
+
+home:
+  other: 首页
+about:
+  other: 关于
+categories:
+  other: 分类
+tags:
+  other: 标签
+series:
+  other: 系列
+
+timeformat:
+  other: 2006 年 1 月 2 日
+
+post:
+  at:
+    other: 发布于
