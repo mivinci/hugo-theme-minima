@@ -6,7 +6,7 @@ googleAnalytics = ""
 
 # paginate decides the number of the newest posts
 # that'll be shown on the home page.
-paginate = 6
+paginate = 12
 
 # theme is the name of the hugo theme you're gonna use,
 # `hugo-theme-minima` is put here only for debuging,
@@ -16,8 +16,8 @@ theme = "hugo-theme-minima"
 # Author has some of your information to be shown on the home page.
 [author]
 name = "Mivinci"
-slogon = "A tech lover from Earth 🌍"
-description = "This is Minima, a clean and minimal Hugo theme porting from the [Hexo Minima](https://github.com/adisaktijrs/hexo-theme-minima). Except for everything from Hexo Minima like dark/light mode, Hugo Minima supports KaTeX, Mermaid, comments and some taxonomies like categories, series and tags. I created this using SASS, VanillaJS and the most importantly, Hugo. 😁"
+slogon = "Living on Earth 🌍"
+description = "This is Minima, a clean and minimal Hugo theme porting from [Hexo Minima](https://github.com/adisaktijrs/hexo-theme-minima). It has supported multiple color themes, math formulas, flowcharts, syntax highlighting, and of course taxonomies like categories, tags, and series."
 
 
 [params]
@@ -37,16 +37,13 @@ switch = ["🌚", "🌝"]
 defaultTheme = "system"
 # If set true, date of posts will be shown in the homepage.
 displayDate = true
+#
+displayDescription = true
 # If set true, users can select text from your post.
 selectable = true
-# Custom global font. notice: `globalFontFamily` won't be working
-# on texts in some special positions like on titles
-globalFontFamily = ""
 # If set true, all your posts will use the chosen comment plugin
 # except those with a `comment: false` specified in their front-matter
 commentOnAllPosts = true
-# toc decides the shape of the toc button. e.g. default, lines, bar
-toc = "lines"
 
 recent = "Recent Posts"
 older = "Older Posts"
@@ -85,16 +82,16 @@ placeholder = ""
 # in that file, each line must be formatted as `name = '<svg>'`
 # where `<svg>` is the svg code.
 [[params.social]]
-name = "github"  
-url = "https://github.com/mivinci/hugo-theme-minima"
-svg = ""
-[[params.social]]
-name = "linkedin"
-url = "https://linkedin/in/leonard-mivinci-63895317a"
-svg = ""
-[[params.social]]
 name = "twitter"
 url = "https://twitter.com/realmivinci"
+svg = ""
+[[params.social]]
+name = "email"
+url = "mailto:mivinci@qq.com"
+svg = ""
+[[params.social]]
+name = "github"  
+url = "https://github.com/mivinci/hugo-theme-minima"
 svg = ""
 [[params.social]]
 name = "rss"

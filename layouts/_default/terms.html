@@ -1,6 +1,6 @@
 {{ define "main" }}
-<main class="container">
-  <h2>{{ .Title }}</h2>
+<main class="container mx-auto">
+  <h2 class="text-3xl font-bold">{{ .Title }}</h2>
   <nav class="flex flex-col">
     {{ $data := .Data }}
     {{ range $key, $value := .Data.Terms.ByCount }}

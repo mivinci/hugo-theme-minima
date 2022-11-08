@@ -5,5 +5,5 @@ document.querySelectorAll('.md ul').forEach(v => {
   }
 });
 
-// use custom font family
-document.querySelector('body').style.setProperty('--global-font-family', '{{ .Site.Params.globalFontFamily }}');
+// // use custom font family
+// document.querySelector('body').style.setProperty('--global-font-family', '{{ .Site.Params.globalFontFamily }}');

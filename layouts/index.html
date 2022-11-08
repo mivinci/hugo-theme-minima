@@ -1,22 +1,22 @@
 {{ define "main" }}
-<main class="container">
-  <h2 class="mt-8 mb-1">{{ .Site.Params.iam }} {{ .Site.Author.name }}</h2>
-  <p class="my-0">{{ .Site.Author.slogon }}</p>
-  <p class="my-3 home-intro">{{ .Site.Author.description | markdownify | safeHTML }}</p>
+<main class="container mx-auto">
+  <h2 class="mt-8 text-3xl font-bold">{{ .Site.Params.iam }} {{ .Site.Author.name }}</h2>
+  <p class="mt-0 mb-0">{{ .Site.Author.slogon }}</p>
+  <p class="mt-3 mb-3 home-intro">{{ .Site.Author.description | markdownify | safeHTML }}</p>
   {{ if eq .Paginator.PageNumber 1 }}
-  <h3 class="mt-6 mb-4">{{ .Site.Params.recent }}</h3>
+  <h3 class="mt-6 mb-4 text-2xl font-bold">{{ .Site.Params.recent }}</h3>
   {{ else }}
-  <h3 class="mt-6 mb-4">{{ .Site.Params.older }}</h3>
+  <h3 class="mt-6 mb-4 text-2xl font-bold">{{ .Site.Params.older }}</h3>
   {{ end }}
   <div>
     {{ $paginator := .Paginate (where .Site.RegularPages "Kind" "page") }}
     {{ range $paginator.Pages }}
-    {{ partial "list.html" . }}
+    {{ partial "item.html" . }}
     {{ end }}
     {{ partial "paginator.html" . }}
   </div>
   {{ if .Site.Params.friends.feeds }}
-  <h3 class="my-6">{{ .Site.Params.friends.title }}</h3>
+  <h3 class="mt-6 mb-6 text-2xl font-semibold">{{ .Site.Params.friends.title }}</h3>
   <div id="friends"></div>
   {{ end }}
 </main>

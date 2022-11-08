@@ -1,0 +1,17 @@
+<div>
+  <div class="flex justify-between">
+    {{ if .Page.Params.link }}
+    <a class="font-bold" href="{{ .Page.Params.link }}">{{ .Title }}</a>
+    {{ else }}
+    <a class="font-bold" href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{ end }}
+    {{ if .Site.Params.displayDate }}
+    <div class="text-xs font-bold">{{ dateFormat .Site.Params.timeformat .Date }}</div>
+    {{ end }}
+  </div>
+  {{ if .Site.Params.displayDescription }}
+  <p class="text-sm mb-2">
+    {{ .Description | markdownify | safeHTML }}
+  </p>
+  {{ end }}
+</div>

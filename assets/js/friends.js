@@ -31,7 +31,7 @@ function rss(xml) {
 
     // innsert dom
     const div = document.createElement('div')
-    div.className = 'flex justify-between sm:flex-col-reverse my-4 sm:mb-6 sm:mt-3'
+    div.className = 'flex justify-between'
     div.innerHTML = template(link, title, date)
     dom.appendChild(div)
 
@@ -52,6 +52,6 @@ function template() {
   const a = arguments
   return `
     <a href=${a[0]}>${a[1]}</a>
-    <div class="sm:mb-2 sm:text-xs">${format(a[2])}</div>
+    <div>${format(a[2])}</div>
   `.trim()
 }

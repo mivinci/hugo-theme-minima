@@ -3,7 +3,6 @@ author: "Hugo Authors"
 title: "Markdown Syntax Guide"
 date: "2021-07-18T10:52:59+08:00"
 description: "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
-toc: true
 categories: ["Markdown"]
 ---
 

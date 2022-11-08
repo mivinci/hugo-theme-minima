@@ -1,14 +1,14 @@
 {{ define "main" }}
-<main class="container">
-	{{ if isset .Data "Term" }}
-	<h2 class="my-8">{{ .Data.Singular | title }} - "{{ .Data.Term }}"</h2>
-	{{ else }}
-	<h2 class="my-8">{{ .Title }}</h2>
-	{{ end }}
-	<div class="mt-8">
-		{{ range .Data.Pages }}
-		{{ partial "list.html" . }}
-		{{ end }}
-	</div>
+<main class="container mx-auto">
+  {{ if isset .Data "Term" }}
+  <h2 class="text-4xl mt-8 mb-8">{{ .Data.Singular | title }} - "{{ .Data.Term }}"</h2>
+  {{ else }}
+  <h2 class="text-4xl mt-8 mb-8">{{ .Title }}</h2>
+  {{ end }}
+  <div class="mt-8">
+    {{ range .Data.Pages }}
+    {{ partial "item.html" . }}
+    {{ end }}
+  </div>
 </main>
 {{ end }}

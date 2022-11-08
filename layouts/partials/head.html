@@ -17,7 +17,7 @@
   <link rel="shortcut icon" href="{{ $favicon | relURL }}" type="image/x-icon" />
   {{ $hash := now.Unix }}
   {{ $options := (dict "targetPath" (printf `minima.%d.css` $hash) "outputStyle" "compressed" "enableSourceMap" true) }}
-  {{ $style := resources.Get "sass/main.scss" | resources.ToCSS $options }}
+  {{ $style := resources.Get "css/main.scss" | resources.ToCSS $options }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}">
   {{ $options = (dict "targetPath" (printf `minima.%d.js` $hash) "minify" true) }}
   {{ $js := resources.Get "js/main.js" | js.Build $options | resources.ExecuteAsTemplate (printf `minima.%d.js` $hash) . }}
@@ -36,7 +36,7 @@
     if (!('theme' in localStorage)) {
       const default_theme = '{{ .Site.Params.defaultTheme }}';
       
-      // For the first time entering this site, use the theme picked by the author.
+      // For the first time entering this site, use the theme specified in the configuration.
       if (default_theme === 'dark' || default_theme === 'light') {
         theme_2b_used = default_theme;
       }
