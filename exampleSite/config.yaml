@@ -40,9 +40,6 @@ params:
   greet: Hello :)
   # subtitle speficies a subtitle displayed right after the site title.
   subtitle:
-  # comment specifies which comment plugin to be used.
-  # currently available ones: disqus, utterances, giscus.
-  comment: utterances
   # switch specifies two emojis to be used as the button toggling color themes.
   switch: ["🌚", "🌝"]
   # defaultTheme specifies a default theme to be used.
@@ -59,35 +56,6 @@ params:
   # post pages. If enabled, those you don't want a comment plugin to work on just
   # set `comment` to false in their front matters.
   commentOnAllPosts: true
-
-  # disqus specifies the configuration for Disqus.
-  disqus:
-    shortname: hugo-minima
-
-  # utterances specifies the configuration for Utterances.
-  # Check out https://utteranc.es for the following three attributes.
-  utterances:
-    repo: mivinci/hugo-theme-minima
-    issueTerm: pathname
-    label: comment
-
-  # giscus specifies the configuration for Giscus.
-  # Check out https://giscus.app for the following six attributes.
-  giscus:
-    repo: mivinci/hugo-theme-minima
-    repoId: MDEwOlJlcG9zaXRvcnkzODcxMjM2NDU=
-    category: Comments
-    categoryId: DIC_kwDOFxMJvc4CScQm
-    mapping: pathname
-    inputPostion: buttom
-
-  # **DEPRECATED**
-  # ovo(https://ovo.js.org) is a comment plugin written by the author of Minima but
-  # is now deprecated out of security issues.
-  ovo:
-    server: ""
-    placeholder: ""
-
   # social is an array containing as many as social accounts to be displayed
   # in the buttom of every page.
   social:
@@ -100,16 +68,36 @@ params:
     - name: "rss"
       url: "/index.xml"
 
+  # comment specifies a comment plugin.
+  comment:
+    provider: giscus
+    # check out https://disqus.com/
+    disqus:
+      shortname: hugo-minima
+      # check out https://utteranc.es
+    utterances:
+      repo: mivinci/hugo-theme-minima
+      issueTerm: pathname
+      label: comment
+    # check out https://giscus.app
+    giscus: 
+      repo: mivinci/hugo-theme-minima
+      repoId: MDEwOlJlcG9zaXRvcnkzODcxMjM2NDU=
+      category: Comments
+      categoryId: DIC_kwDOFxMJvc4CScQm
+      mapping: pathname
+      inputPosition: buttom # bottom | top
+      reactions: true
+      metadata: false
+
 # menu.main is an array containing what is used as the navigator.
 menu:
   main:
     - identifier: tags
       name: "Tags"
-      url: "/tags"
       weight: 2
     - identifier: series
       name: "Series"
-      url: "/series"
       weight: 3
 
 # taxonomies defines ways to classify yout posts. Below are some presets that

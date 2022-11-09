@@ -5,12 +5,12 @@
         {{ if .Site.Params.brand }}
         <div class="mr-3 text-3xl"><a href="/">{{ .Site.Params.brand }}</a></div>
         {{ end }}
-        <div id="theme-switcher" class="text-3xl cursor-pointer">{{ index .Site.Params.switch 1 }}</div>
+        <div id="theme-switch" class="text-3xl cursor-pointer">{{ index .Site.Params.switch 1 }}</div>
       </div>
       <ul class="flex items-center font-medium
         whitespace-nowrap overflow-x-auto overflow-y-hidden">
         {{ range .Site.Menus.main }}
-        <li class="ml-1 mr-1"><a href="{{ .URL | absLangURL }}">{{ T .Identifier | default .Name }}</a></li>
+        <li class="ml-1 mr-1"><a href="{{ .Identifier | relLangURL }}">{{ T .Identifier | default .Name }}</a></li>
         {{ end }}
       </ul>
       <ul class="flex item-center text-sm font-bold">

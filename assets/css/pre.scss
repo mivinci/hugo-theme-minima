@@ -90,12 +90,18 @@ a:hover {
 2. Correct the odd `em` font sizing in all browsers.
 */
 
-code,
+
 kbd,
 samp,
-pre {
+pre,
+code {
   --default-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-family: var(--font-mono, --default-font-mono);
+}
+
+
+pre {
+  overflow-x: auto;
 }
 
 /*

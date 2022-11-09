@@ -14,8 +14,9 @@
     </div>
     {{ if .Params.tags }}
     <div>
-      {{ range .Params.tags }}
-      <a class="ml-1" href="/tags/{{ . }}">#{{ . }}</a>
+      {{ range $tag := .Params.tags }}
+      {{ $url := printf "tags/%s" $tag | relLangURL }}
+      <a class="ml-1" href="{{ $url }}">#{{ . }}</a>
       {{ end }}
     </div>
     {{ end }}
@@ -26,32 +27,6 @@
       {{ .Content }}
     </article>
   </main>
-  {{ if or .Params.math .Site.Params.math }}
-  {{ partial "math.html" . }}
-  {{ end }}
-
-  {{ if or .Params.mermaid .Site.Params.mermaid }}
-  {{ partial "mermaid.html" . }}
-  {{ end }}
-
-  {{ if or .Params.comment (and .Site.Params.commentOnAllPosts (ne .Params.comment false)) }}
-  
-  {{ if eq .Site.Params.comment "disqus"}}
-  {{ partial "disqus.html" . }}
-  {{ end }}
-
-  {{ if eq .Site.Params.comment "utterances"}}
-  {{ partial "utterances.html" . }}
-  {{ end }}
-
-  {{ if eq .Site.Params.comment "giscus" }}
-  {{ partial "giscus.html" }}
-  {{ end }}
-
-  {{ if eq .Site.Params.comment "ovo"}}
-  {{ partial "ovo.html" . }}
-  {{ end }}
-  
-  {{ end }}
+  {{ partial "plugin.html" . }}
 </div>
 {{ end }}

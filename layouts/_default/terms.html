@@ -5,7 +5,7 @@
     {{ $data := .Data }}
     {{ range $key, $value := .Data.Terms.ByCount }}
     <div class="mb-5 flex justify-between">
-      <a class="self-start" href="{{ $data.Plural | absLangURL }}/{{ $value.Name }}">
+      <a class="self-start" href="{{ $data.Plural | relLangURL }}/{{ $value.Name }}">
         {{ $value.Name }}
       </a>
       <span class="">{{ $value.Count }}</span>

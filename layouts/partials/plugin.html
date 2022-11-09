@@ -1,0 +1,23 @@
+{{ if or .Params.math .Site.Params.math }}
+{{ partial "math.html" . }}
+{{ end }}
+
+{{ if or .Params.mermaid .Site.Params.mermaid }}
+{{ partial "mermaid.html" . }}
+{{ end }}
+
+{{ if or .Params.comment (and .Site.Params.commentOnAllPosts (ne .Params.comment false)) }}
+
+{{ if eq .Site.Params.comment.provider "disqus"}}
+{{ partial "disqus.html" . }}
+{{ end }}
+
+{{ if eq .Site.Params.comment.provider "giscus" }}
+{{ partial "giscus.html" . }}
+{{ end }}
+
+{{ if eq .Site.Params.comment.provider "utterances"}}
+{{ partial "utterances.html" . }}
+{{ end }}
+
+{{ end }}
