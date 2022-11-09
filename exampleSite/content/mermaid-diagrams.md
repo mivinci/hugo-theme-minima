@@ -3,7 +3,7 @@ author: Mermaid Team
 title: Mermaid Diagrams
 date: 2021-07-18T10:52:59+08:00
 description: A brief guide to Mermaid syntax.
-mermaid: true
+diagram: true
 tags:
     - markdown
     - mermaid

@@ -30,11 +30,16 @@
 </head>
 <script>
   // default to system color scheme.
-  let systemColorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  let default_theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 
   try {
-    document.querySelector('html').classList.add(systemColorScheme);
-    localStorage.setItem('theme', systemColorScheme);
+    const local = localStorage.getItem('theme')
+    if (local) {
+      default_theme = local
+    }
+    localStorage.setItem('theme', default_theme);
+    window.minima_theme = default_theme;
+    document.querySelector('html').classList.add(default_theme);
   } catch (e) {
     console.error(e);
   }

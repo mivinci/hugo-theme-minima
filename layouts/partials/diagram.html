@@ -1,3 +1,4 @@
+{{ if eq .Site.Params.diagram.provider "mermaid" }}
 <script 
   src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"
   crossorigin="anonymous">
@@ -5,3 +6,4 @@
 <script>
   mermaid.init(undefined, 'code.language-mermaid')
 </script>
+{{ end }}

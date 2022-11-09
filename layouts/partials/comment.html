@@ -1,0 +1,67 @@
+<!-- slot -->
+<div id="comment"></div>
+
+<!-- Giscus -->
+{{ if eq .Site.Params.comment.provider "giscus" }}
+{{ with .Site.Params.comment.giscus }}
+<script>
+    const s = document.createElement("script")
+    s.src = "https://giscus.app/client.js"
+    s.crossOrigin = "anonymous"
+    s.async = true
+    s.setAttribute("data-repo", "{{ .repo }}")
+    s.setAttribute("data-repo-id", "{{ .repoId }}")
+    s.setAttribute("data-category", "{{ .category }}")
+    s.setAttribute("data-category-id", "{{ .categoryId }}")
+    s.setAttribute("data-mapping", "{{ .mapping }}")
+    s.setAttribute("data-strict", "0")
+    s.setAttribute("data-reactions-enabled", "{{ cond .reactions 1 0 }}")
+    s.setAttribute("data-emit-metadata", "{{ cond .metadata 1 0 }}")
+    s.setAttribute("data-input-position", "{{ .inputPosition }}")
+    s.setAttribute("data-theme", window.minima_theme + "_protanopia")
+    s.setAttribute("data-lang", "en")
+    s.setAttribute("data-loading", "lazy")
+    document.getElementById("comment").appendChild(s)
+</script>
+{{ end }}
+{{ end }}
+
+<!-- Utterances -->
+{{ if eq .Site.Params.comment.provider "utterances" }}
+{{ with .Site.Params.comment.utterances }}
+<script>
+    const s = document.createElement("script")
+    s.src = "https://utteranc.es/client.js"
+    s.crossOrigin = "anonymous"
+    s.async = true
+    s.setAttribute("repo", "{{ .repo }}")
+    s.setAttribute("issue-term", "{{ .issueTerm }}")
+    s.setAttribute("label", "{{ .label }}")
+    s.setAttribute("theme", "github-" + window.minima_theme)
+    document.getElementById("comment").appendChild(s)
+</script>
+{{ end }}
+{{ end }}
+
+<!-- Disqus -->
+{{ if eq .Site.Params.comment.provider "disqus" }}
+{{ with .Site.Params.comment.disqus }}
+<div id="disqus_thread" class="mt-8 mb-8"></div>
+<script type="text/javascript">
+    // Don't ever inject Disqus on localhost--it creates unwanted
+    // discussions from 'localhost:1313' on your Disqus account...
+    if (window.location.hostname == "localhost")
+        return;
+
+    const dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+
+    const disqus_shortname = '{{ .shortname }}';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    document.getElementById("comment").appendChild(dsq);
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+        Disqus.</a></noscript>
+{{ end }}
+{{ end }}

@@ -54,8 +54,8 @@ Follow [exampleSite/config.yaml](https://github.com/Mivinci/hugo-theme-minima/bl
 | categories  | array  | category list |
 | series      | array  | series list |
 | tags        | array  | tag list |
-| math        | bool   | enables math formulas rendering |
-| mermaid     | bool   | enables flowcharts rendering |
+| math        | bool   | enables math plugin |
+| diagram     | bool   | enables diagram plugin |
 | comment     | bool   | enable comment plugin |
 | draft       | bool   | disallow being published |
 | link        | string | a URL to redirect to |

@@ -52,10 +52,6 @@ params:
   displayDescription: true
   # selectable specifies if your post content can be selected.
   selectable: true
-  # commentOnAllPosts specifies if the chosen comment plugin to be enabled on all
-  # post pages. If enabled, those you don't want a comment plugin to work on just
-  # set `comment` to false in their front matters.
-  commentOnAllPosts: true
   # social is an array containing as many as social accounts to be displayed
   # in the buttom of every page.
   social:
@@ -68,8 +64,19 @@ params:
     - name: "rss"
       url: "/index.xml"
 
-  # comment specifies a comment plugin.
+  # math plugin
+  math:
+    enable: false
+    provider: katex
+
+  # diagram plugin
+  diagram:
+    enable: false
+    provider: mermaid
+
+  # comment plugin
   comment:
+    enable: true
     provider: giscus
     # check out https://disqus.com/
     disqus:
@@ -89,6 +96,7 @@ params:
       inputPosition: buttom # bottom | top
       reactions: true
       metadata: false
+
 
 # menu.main is an array containing what is used as the navigator.
 menu:

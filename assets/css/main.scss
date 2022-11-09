@@ -37,6 +37,10 @@ main p a {
   color: var(--prime);
 }
 
+main p a:hover {
+  text-decoration: underline;
+}
+
 @keyframes showup {
   from {
     opacity: 0;

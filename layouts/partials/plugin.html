@@ -1,27 +1,11 @@
-<script>
-  window.minima_theme = localStorage.getItem('theme')
-</script>
-
-{{ if or .Params.math .Site.Params.math }}
-{{ partial "katex.html" . }}
+{{ if or .Params.math (and .Site.Params.math.enable (ne .Params.math false)) }}
+{{ partial "math.html" . }}
 {{ end }}
 
-{{ if or .Params.mermaid .Site.Params.mermaid }}
-{{ partial "mermaid.html" . }}
+{{ if or .Params.diagram (and .Site.Params.diagram.enable (ne .Params.diagram false)) }}
+{{ partial "diagram.html" . }}
 {{ end }}
 
-{{ if or .Params.comment (and .Site.Params.commentOnAllPosts (ne .Params.comment false)) }}
-
-{{ if eq .Site.Params.comment.provider "disqus"}}
-{{ partial "disqus.html" . }}
-{{ end }}
-
-{{ if eq .Site.Params.comment.provider "giscus" }}
-{{ partial "giscus.html" . }}
-{{ end }}
-
-{{ if eq .Site.Params.comment.provider "utterances"}}
-{{ partial "utterances.html" . }}
-{{ end }}
-
+{{ if or .Params.comment (and .Site.Params.comment.enable (ne .Params.comment false)) }}
+{{ partial "comment.html" . }}
 {{ end }}
