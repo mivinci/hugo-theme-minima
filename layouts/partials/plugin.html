@@ -1,5 +1,9 @@
+<script>
+  window.minima_theme = localStorage.getItem('theme')
+</script>
+
 {{ if or .Params.math .Site.Params.math }}
-{{ partial "math.html" . }}
+{{ partial "katex.html" . }}
 {{ end }}
 
 {{ if or .Params.mermaid .Site.Params.mermaid }}

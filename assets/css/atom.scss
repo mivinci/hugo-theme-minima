@@ -36,6 +36,10 @@
   align-items: flex-start;
 }
 
+.items-end {
+  align-items: flex-end;
+}
+
 .items-baseline {
   align-items: baseline;
 }
@@ -76,6 +80,11 @@ $texts: (xs, 0.75), (sm, 0.875), (base, 1), (lg, 1.125), (xl, 1.25),
 
 .whitespace-nowrap {
   white-space: nowrap;
+}
+
+.list-disc {
+  list-style-type: disc;
+  padding-inline-start: 22px;
 }
 
 /* interactivity */

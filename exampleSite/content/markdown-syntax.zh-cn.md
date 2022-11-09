@@ -3,8 +3,9 @@ author: "Mivinci"
 title: "Markdown 语法指北"
 date: "2021-07-18T10:52:59+08:00"
 description: "一篇 Markdown 示例文章，翻译自官方示例。"
-categories: ["markdown"]
-tags: ["markdown"]
+categories:
+tags:
+  - markdown
 ---
 
 本文提供了一个可以在 Hugo 内容文件中使用的基本 Markdown 语法示例，还展示了基本 HTML 元素是否在 Hugo 主题中使用 CSS 进行修饰。
@@ -100,7 +101,7 @@ blockquote 元素表示从另一个来源引用的内容，可选地带有必须
 type Registry interface {
     Register(*Service, ...RegisterOption) error
     Deregister(*Service, ...DeregisterOption) error
-    GetService(string, ...GetOption) ([]*Service, error)
+    List(string, ...ListOption) ([]*Service, error)
 }
 ```
 

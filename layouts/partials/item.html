@@ -1,12 +1,12 @@
 <div>
-  <div class="flex justify-between">
+  <div class="flex justify-between items-start">
     {{ if .Page.Params.link }}
     <a class="text-lg font-bold" href="{{ .Page.Params.link }}">{{ .Title }}</a>
     {{ else }}
     <a class="text-lg font-bold" href="{{ .RelPermalink }}">{{ .Title }}</a>
     {{ end }}
     {{ if .Site.Params.displayDate }}
-    <div class="text-sm font-bold">{{ .Date | time.Format (T "timeformat") }}</div>
+    <div class="text-sm font-bold whitespace-nowrap">{{ .Date | time.Format (T "timeformat") }}</div>
     {{ end }}
   </div>
   {{ if .Site.Params.displayDescription }}

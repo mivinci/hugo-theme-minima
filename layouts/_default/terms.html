@@ -1,16 +1,15 @@
 {{ define "main" }}
 <main class="container mx-auto">
-  <h2 class="text-3xl font-bold">{{ .Title }}</h2>
-  <nav class="flex flex-col">
-    {{ $data := .Data }}
-    {{ range $key, $value := .Data.Terms.ByCount }}
-    <div class="mb-5 flex justify-between">
-      <a class="self-start" href="{{ $data.Plural | relLangURL }}/{{ $value.Name }}">
-        {{ $value.Name }}
-      </a>
-      <span class="">{{ $value.Count }}</span>
-    </div>
-    {{ end }}
+  <h2 class="text-3xl font-bold mb-3">{{ .Title }}</h2>
+  <ul class="list-disc">
+  {{ $data := .Data }}
+  {{ range $key, $value := $data.Terms.ByCount }}
+    <li>
+      <a class="text-lg" href="{{ $data.Plural | relLangURL }}/{{ $value.Name }}">{{ $value.Name }}</a>
+      <span class="text-sm font-semibold ml-1">{{ $value.Count }}</span>
+    </li>
+  {{ end }}
+  </ul>
   </nav>
 </main>
 {{ end }}
