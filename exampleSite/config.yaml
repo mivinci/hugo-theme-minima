@@ -1,7 +1,7 @@
 baseURL: https://mivinci.github.io/hugo-theme-minima
 languageCode: en-us
 title: Hugo on Minima
-copyright: © 2022 Mivinci
+copyright: © 2022 X
 googleAnalytics:
 # paginate specifies the maximum number of posts displayed on the home page.
 paginate: 12
@@ -27,7 +27,7 @@ languages:
 
 # author specifies your name, a slogon and your brief self-introduction.
 author:
-  name: Mivinci
+  name: X
   status: Am currently living on Earth 🌍
   description: |
     This is Minima, a clean and minimal Hugo theme porting from 

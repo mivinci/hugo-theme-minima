@@ -1,6 +1,15 @@
+// $devices: ("", 0), (sm\:, 480px);
+// @each $dev, $size in devices {
+//   // this is gonna waste hella space
+// }
+
 /* layout */
 .container {
   max-width: var(--max-w);
+}
+
+.hidden {
+  display: none;
 }
 
 .overflow-x-auto {
