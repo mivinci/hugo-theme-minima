@@ -2,7 +2,7 @@
 author: Mermaid Team
 title: Mermaid Diagrams
 date: 2021-07-18T10:52:59+08:00
-description: A brief guide to Mermaid syntax.
+description: A brief guide to write diagrams.
 diagram: true
 tags:
     - markdown
@@ -26,6 +26,8 @@ C -->|One| D[Result 1]
 C -->|Two| E[Result 2]
 ```
 
+will be rendered as:
+
 ```mermaid
 flowchart LR
 
@@ -48,6 +50,8 @@ John-->>Alice: Great!
 John->>Bob: How about you?
 Bob-->>John: Jolly good!
 ```
+
+will be rendered as:
 
 ```mermaid
 sequenceDiagram
@@ -73,6 +77,8 @@ gantt
     Parallel 3   :         des5, after des3, 1d
     Parallel 4   :         des6, after des4, 1d
 ```
+
+will be rendered as:
 
 ```mermaid
 gantt
@@ -106,6 +112,8 @@ class Class10 {
 }
 ```
 
+will be rendered as:
+
 ```mermaid
 classDiagram
 Class01 <|-- AveryLongClass : Cool
@@ -137,6 +145,8 @@ Moving --> Crash
 Crash --> [*]
 ```
 
+will be rendered as:
+
 ```mermaid
 stateDiagram-v2
 [*] --> Still
@@ -155,6 +165,8 @@ pie
 "Cats" : 85.9
 "Rats" : 15
 ```
+
+will be rendered as:
 
 ```mermaid
 pie
@@ -177,6 +189,8 @@ pie
       Go downstairs: 5: Me
       Sit down: 3: Me
 ```
+
+will be rendered as:
 
 ```mermaid
   journey
@@ -226,6 +240,8 @@ BiRel(SystemAA, SystemE, "Uses")
 Rel(SystemAA, SystemC, "Sends e-mails", "SMTP")
 Rel(SystemC, customerA, "Sends e-mails to")
 ```
+
+will be rendered as:
 
 ```mermaid
 C4Context

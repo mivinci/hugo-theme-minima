@@ -67,7 +67,22 @@ blockquote 元素表示从另一个来源引用的内容，可选地带有必须
 
 ## 代码块
 
-#### 带反引号的代码块
+#### 不使用高亮的代码块
+
+```
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Example HTML5 Document</title>
+  </head>
+  <body>
+    <p>Test</p>
+  </body>
+</html>
+```
+
+#### HTML 的代码块
 
 ```html
 <!doctype html>
@@ -82,20 +97,7 @@ blockquote 元素表示从另一个来源引用的内容，可选地带有必须
 </html>
 ```
 
-#### 缩进四个空格的代码块
-
-    <!doctype html>
-    <html lang="en">
-    <head>
-      <meta charset="utf-8">
-      <title>Example HTML5 Document</title>
-    </head>
-    <body>
-      <p>Test</p>
-    </body>
-    </html>
-
-#### Golang 的代码块
+#### Go 的代码块
 
 ```go {hl_lines=[3]}
 type Registry interface {
