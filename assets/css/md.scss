@@ -59,17 +59,22 @@ $heading: (h1, 2.25, 800), (h2, 2, 700), (h3, 1.75, 600), (h4, 1.5, 600),
 
 .md ul {
   list-style: disc;
-  padding-inline-start: 22px;
+  padding-inline-start: 30px;
+}
+
+.md ol {
+  list-style: decimal;
+  padding-inline-start: 30px;
 }
 
 .md ul input[type="checkbox"] {
   margin: 0;
-  margin-right: 3px;
+  margin-right: 7px;
 }
 
 .md .ul-checkbox {
   list-style: none;
-  padding-inline-start: 2px;
+  padding-inline-start: 8px;
 }
 
 .md li {
