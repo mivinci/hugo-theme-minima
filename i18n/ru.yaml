@@ -1,0 +1,28 @@
+recent:
+  other: Свежие посты
+older:
+  other: Старые посты
+
+home:
+  other: Home
+about:
+  other: Обо мне
+categories:
+  other: Категории
+tags:
+  other: Тэги
+series:
+  other: Серии
+
+timeformat:
+  other: Jan 02, 2006
+
+paginator:
+  prev:
+    other: Новые
+  next:
+    other: Старые
+
+post:
+  at:
+    other: Обуликовано
