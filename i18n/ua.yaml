@@ -1,0 +1,28 @@
+recent:
+  other: Нові дописи
+older:
+  other: Старі дописи
+
+home:
+  other: Головна
+about:
+  other: Про мене
+categories:
+  other: Категорії
+tags:
+  other: Теги
+series:
+  other: Серії
+
+timeformat:
+  other: Jan 02, 2006
+
+paginator:
+  prev:
+    other: Нові
+  next:
+    other: Старі
+
+post:
+  at:
+    other: Опубліковано
