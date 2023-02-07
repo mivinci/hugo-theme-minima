@@ -28,7 +28,7 @@ languages:
 # author specifies your name, a slogon and your brief self-introduction.
 author:
   name: X
-  status: Am currently living on Earth 🌍
+  status: Currently living on Earth 🌍
   description: |
     This is Minima, a clean and minimal Hugo theme porting from 
     [Hexo Minima](https://github.com/adisaktijrs/hexo-theme-minima). It has supports 
