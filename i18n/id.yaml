@@ -1,0 +1,28 @@
+recent:
+  other: Postingan Terbaru
+older:
+  other: Postingan Lama
+
+home:
+  other: Beranda
+about:
+  other: Tentang
+categories:
+  other: Kategori
+tags:
+  other: Tags
+series:
+  other: Series
+
+timeformat:
+  other: 2 Jan 2006
+
+paginator:
+  prev:
+    other: Lebih Baru
+  next:
+    other: Lebih Lama
+
+post:
+  at:
+    other: Postingan pada
