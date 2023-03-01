@@ -69,6 +69,10 @@ I'm currently looking for i18n contributors :)
 
 Feedbacks are welcome [here](https://github.com/Mivinci/hugo-theme-minima/issues).
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=mivinci/hugo-theme-minima&type=Date)](https://star-history.com/#star-history/star-history&Date)
+
 ## License
 
 Hugo Minima is MIT licensed.
