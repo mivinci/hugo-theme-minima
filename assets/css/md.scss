@@ -69,10 +69,10 @@ $heading: (h1, 2.25, 800), (h2, 2, 700), (h3, 1.75, 600), (h4, 1.5, 600),
 
 .md ul input[type="checkbox"] {
   margin: 0;
-  margin-right: 7px;
+  margin-right: 5px;
 }
 
-.md .ul-checkbox {
+.md ul:has(input) {
   list-style: none;
   padding-inline-start: 8px;
 }

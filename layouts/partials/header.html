@@ -10,7 +10,7 @@
       <ul class="flex items-center font-medium
         whitespace-nowrap overflow-x-auto overflow-y-hidden">
         {{ range .Site.Menus.main }}
-        <li class="ml-1 mr-1"><a href="{{ .Identifier | relLangURL }}">{{ T .Identifier | default .Name }}</a></li>
+        <li class="ml-2 mr-2"><a href="{{ .Identifier | relLangURL }}">{{ T .Identifier | default .Name }}</a></li>
         {{ end }}
       </ul>
       <ul class="flex item-center text-sm font-bold">
