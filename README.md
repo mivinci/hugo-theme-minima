@@ -65,6 +65,13 @@ Follow [exampleSite/config.yaml](https://github.com/Mivinci/hugo-theme-minima/bl
 
 I'm currently looking for i18n contributors :)
 
+## Forms
+
+
+[add a contact form and publish to github pages]
+](https://fabform.io/a/create-a-static-website-with-contact-form-on-github-pages)
+
+
 ## Feedback
 
 Feedbacks are welcome [here](https://github.com/Mivinci/hugo-theme-minima/issues).
