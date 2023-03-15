@@ -6,8 +6,13 @@
   <h2 class="text-4xl mt-8 mb-8">{{ .Title }}</h2>
   {{ end }}
   <div class="mt-8">
-    {{ range .Data.Pages }}
-    {{ partial "item.html" . }}
+    {{ range .Data.Pages.GroupByDate "2006" }}
+      <h3 class="text-3xl font-bold mb-4 mt-8">
+        <a href="#{{ .Key }}">{{ .Key }}</a>
+      </h3>
+      {{ range .Pages }}
+      {{ partial "item.html" . }}
+      {{ end }}
     {{ end }}
   </div>
 </main>
