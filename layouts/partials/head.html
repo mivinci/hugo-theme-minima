@@ -15,12 +15,11 @@
   </title>
   {{ $favicon := "favicon.ico" }}
   <link rel="shortcut icon" href="{{ $favicon | relURL }}" type="image/x-icon" />
-  {{ $hash := now.Unix }}
-  {{ $options := (dict "targetPath" (printf `minima.%d.css` $hash) "outputStyle" "compressed" "enableSourceMap" true) }}
+  {{ $options := (dict "targetPath" "minima.css" "outputStyle" "compressed" "enableSourceMap" true) }}
   {{ $style := resources.Get "css/main.scss" | resources.ToCSS $options }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}">
-  {{ $options = (dict "targetPath" (printf `minima.%d.js` $hash) "minify" true) }}
-  {{ $js := resources.Get "js/main.js" | js.Build $options | resources.ExecuteAsTemplate (printf `minima.%d.js` $hash) . }}
+  {{ $options = (dict "targetPath" "minima.js" "minify" true) }}
+  {{ $js := resources.Get "js/main.js" | js.Build $options | resources.ExecuteAsTemplate "minima.js" . }}
   <script defer type="text/javascript" src="{{ $js.RelPermalink }}"></script>
   {{ if .IsTranslated }}
 	{{ range .Translations }}
