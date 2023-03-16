@@ -1,11 +1,12 @@
 ---
 author: Mivinci
 title: Math Typesetting
-date: 2021-07-18T10:52:59+08:00
+date: 2020-07-18T10:52:59+08:00
 description: A brief guide to write mathematical notation.
 math: true
 tags: 
     - KaTex
+    - markdown
 ---
 
 Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries like [KaTeX](https://katex.org) the one that Minima uses. Here's what you can do in the configuration file to enable it.
