@@ -16,7 +16,7 @@
   {{ $favicon := "favicon.ico" }}
   <link rel="shortcut icon" href="{{ $favicon | relURL }}" type="image/x-icon" />
   {{ $options := (dict "targetPath" "minima.css" "outputStyle" "compressed" "enableSourceMap" true) }}
-  {{ $style := resources.Get "css/main.scss" | resources.ToCSS $options }}
+  {{ $style := resources.Get "css/main.scss" | resources.ExecuteAsTemplate "main.scss" . | resources.ToCSS $options }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}">
   {{ $options = (dict "targetPath" "minima.js" "minify" true) }}
   {{ $js := resources.Get "js/main.js" | js.Build $options | resources.ExecuteAsTemplate "minima.js" . }}
@@ -29,12 +29,14 @@
 </head>
 <script>
   // default to system color scheme.
-  let default_theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  const default_theme_config = '{{ .Site.Params.defaultTheme }}'
+  const default_light_theme = default_theme_config === 'system' ? 'light' : default_theme_config;
+  let default_theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : default_light_theme;
 
   try {
-    const local = localStorage.getItem('theme')
-    if (local) {
-      default_theme = local
+    const saved_theme = localStorage.getItem('theme')
+    if (saved_theme) {
+      default_theme = saved_theme === default_light_theme ? saved_theme : default_light_theme;  
     }
     localStorage.setItem('theme', default_theme);
     window.minima_theme = default_theme;

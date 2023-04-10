@@ -7,7 +7,7 @@
         {{ end }}
         <div id="theme-switch" class="text-3xl cursor-pointer">{{ index .Site.Params.switch 1 }}</div>
       </div>
-      <ul class="flex items-center font-medium
+      <ul class="flex items-center text-base font-bold
         whitespace-nowrap overflow-x-auto overflow-y-hidden">
         {{ range .Site.Menus.main }}
         <li class="ml-2 mr-2"><a href="{{ .Identifier | relLangURL }}">{{ T .Identifier | default .Name }}</a></li>

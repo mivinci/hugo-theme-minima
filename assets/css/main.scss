@@ -4,6 +4,7 @@
 @import "./md.scss";
 @import "./syntax.scss";
 
+
 :root {
   --max-w: 640px;
   --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
@@ -23,6 +24,8 @@ body {
   margin: 0 16px;
   font-family: var(--font);
   font-weight: 400;
+  line-height: 1.6;
+  background-image: var(--back-image);
   background-color: var(--back);
   color: var(--text);
   transition-property: background-color, border-color, color;
@@ -53,3 +56,8 @@ main p a:hover {
   }
 }
 
+@media (min-width: 640px) {
+  body {
+    margin-top: calc(1rem + 2vh);
+  }
+}

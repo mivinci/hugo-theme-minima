@@ -1,9 +1,4 @@
-.light {
-  --prime: #3170a7;
-  --grid: #e1e1e1;
-  --back: #fff;
-  --text: #222;
-
+:root {
   // code highlighting
   --code-back: #f6f8fa;
   --code-text: #24292f;
@@ -17,6 +12,13 @@
   --code-function: #0550ae;
   --code-meta: #cf222e;
   --code-highlighted-line: #e9e9e9;
+}
+
+.light {
+  --prime: #3170a7;
+  --grid: #e1e1e1;
+  --back: #fff;
+  --text: #333;
 }
 
 .dark {
@@ -38,4 +40,28 @@
   --code-function: #dcdcaaca;
   --code-meta: #c586c0cb;
   --code-highlighted-line: #9494951b;
+}
+
+.sand {
+  --prime: #3170a7;
+  --back: #e6dece;
+  --text: #434343;
+
+  --code-back: #dbd3c1be;
+  --code-text: #24292f;
+  --code-highlighted-line: #cec3ac;
+
+  --back-image: url('texture.png');
+}
+
+.rock {
+  --prime: #3170a7;
+  --back: #ccc;
+  --text: #434343;
+
+  --code-back: #c1c1c1be;
+  --code-text: #24292f;
+  --code-highlighted-line: #afaeae;
+
+  --back-image: url('texture.png');
 }

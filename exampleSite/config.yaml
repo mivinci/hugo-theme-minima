@@ -1,7 +1,7 @@
 baseURL: https://mivinci.github.io/hugo-theme-minima
 languageCode: en-us
 title: Hugo on Minima
-copyright: © 2022 X
+copyright: © 2023 X
 googleAnalytics:
 # paginate specifies the maximum number of posts displayed on the home page.
 paginate: 12
@@ -12,10 +12,10 @@ defaultContentLanguage: en
 # language.x setup
 languages:
   en:
-    languageName: EN
+    languageName: EN # will be displayed in the navbar.
     weight: 1
   zh-cn:
-    languageName: ZH
+    languageName: 简中 # will be displayed in the navbar.
     weight: 2
     author:
       status: 目前住在地球 🌍
@@ -40,17 +40,17 @@ params:
   greet: Hello :)
   # subtitle speficies a subtitle displayed right after the site title.
   subtitle:
-  # switch specifies two emojis to be used as the button toggling color themes.
+  # switch specifies two emojis used as the button toggling color themes.
   switch: ["🌚", "🌝"]
-  # defaultTheme specifies a default theme to be used.
-  # currently available options: light, dark, system.
-  defaultTheme: system
+  # minima has one dark theme and multiple light themes. defaultTheme specifies
+  # a default light theme to use. currently available options: light, sand, rock, system.
+  defaultTheme: sand
   # displayDate speficies whether or not to display post date on the home page.
   displayDate: true
   # displayDescription specifies whether or not to display post description on
   # the hoem page.
   displayDescription: true
-  # selectable specifies if your post content can be selected.
+  # selectable specifies if or not your post content can be selected.
   selectable: true
   # social is an array containing as many as social accounts to be displayed
   # in the buttom of every page.
@@ -116,7 +116,7 @@ taxonomies:
   series: series
 
 # markup.highlight has two keys set to make sure that the syntax highlighting
-# in your posts are rendered correctly, so do not edit them.
+# in your posts are rendered correctly, so DO NOT edit them.
 markup:
   highlight:
     lineNos: true
