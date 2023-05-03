@@ -1,28 +1,28 @@
 recent:
-  other: Recent Posts
+  other: 近期文章
 older:
-  other: Older Posts
+  other: 歷史文章
 
 home:
-  other: Home
+  other: 首頁
 about:
-  other: About
+  other: 關於
 categories:
-  other: Categories
+  other: 分類
 tags:
-  other: Tags
+  other: 標籤
 series:
-  other: Series
+  other: 系列
 
 timeformat:
-  other: Jan 02, 2006
+  other: 2006 年 01 月 02 日
 
 paginator:
   prev:
-    other: Newer
+    other: 上一頁
   next:
-    other: Older
+    other: 下一頁
 
 post:
   at:
-    other: Post at
+    other: 發佈於

@@ -15,7 +15,7 @@ series:
   other: 系列
 
 timeformat:
-  other: 2006 年 1 月 2 日
+  other: 2006 年 01 月 02 日
 
 paginator:
   prev:
