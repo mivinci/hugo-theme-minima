@@ -1,7 +1,7 @@
 baseURL: https://mivinci.github.io/hugo-theme-minima
 languageCode: en-us
 title: Hugo on Minima
-copyright: © 2023 X
+copyright: © 2020-2023 X
 googleAnalytics:
 # paginate specifies the maximum number of posts displayed on the home page.
 paginate: 12

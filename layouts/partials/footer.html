@@ -1,11 +1,14 @@
 <footer class="mt-8 mb-8">
   <div class="container mx-auto">
     <div class="mt-8 flex flex-col-reverse sm:flex-row sm:justify-between items-center">
-      <p class="mt-0 text-sm">
-        {{ .Site.Copyright }} |
-        <a href="https://gohugo.io" target="_blank" rel="noopener noreferrer">Hugo</a> on
-        <a href="https://github.com/mivinci/hugo-theme-minima" target="_blank" rel="noopener noreferrer">Minima</a>
-      </p>
+      <div class="text-center sm:text-left">
+        <p class="mt-0 text-sm">{{ .Site.Copyright }}</p>
+        <p class="mt-0 text-xs">
+          Built with <a href="https://gohugo.io" target="_blank" rel="noopener noreferrer">Hugo</a> v{{ .Site.Hugo.Version }}
+          and <a href="https://github.com/mivinci/hugo-theme-minima" target="_blank" rel="noopener noreferrer">Minima</a>
+        </p>
+      </div>
+      
       <p class="flex items-center mt-0">
         {{ range $_, $key := .Site.Params.Social }}
           <a class="icon ml-1 mr-1" href="{{ $key.url }}" title="{{ $key.name }}">

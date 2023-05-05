@@ -9,7 +9,7 @@
   }
 }
 
-/* flex */
+/* classes that breakpoints are necessary for */
 $screens: ("", 0), (sm\:, 640px);
 @each $k, $v in $screens {
   @include breakpoint($k, $v) {
@@ -30,6 +30,10 @@ $screens: ("", 0), (sm\:, 640px);
     .#{$k}items-end { align-items: flex-end; }
     
     .#{$k}items-baseline { align-items: baseline; }
+
+    .#{$k}text-center { text-align: center; }
+
+    .#{$k}text-left { text-align: left; }
   }
 }
 
