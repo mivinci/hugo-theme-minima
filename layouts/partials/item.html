@@ -1,5 +1,5 @@
 <div>
-  <div class="flex justify-between items-start">
+  <div class="flex flex-col-reverse sm:flex-row sm:justify-between">
     {{ if .Page.Params.link }}
     <a class="text-lg font-bold" href="{{ .Page.Params.link }}">{{ .Title }}</a>
     {{ else }}

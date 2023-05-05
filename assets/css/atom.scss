@@ -1,7 +1,37 @@
-// $devices: ("", 0), (sm\:, 480px);
-// @each $dev, $size in devices {
-//   // this is gonna waste hella space
-// }
+@mixin breakpoint($k, $v) {
+  @if $k == "" {
+    @content;
+  }
+  @else {
+    @media (min-width: $v) {
+      @content;
+    }
+  }
+}
+
+/* flex */
+$screens: ("", 0), (sm\:, 640px);
+@each $k, $v in $screens {
+  @include breakpoint($k, $v) {
+    .#{$k}flex { display: flex; }
+    
+    .#{$k}flex-row { flex-direction: row; }
+    
+    .#{$k}flex-col { flex-direction: column; }
+
+    .#{$k}flex-col-reverse { flex-direction: column-reverse; }
+    
+    .#{$k}justify-between { justify-content: space-between; }
+    
+    .#{$k}items-center { align-items: center; }
+    
+    .#{$k}items-start { align-items: flex-start; }
+    
+    .#{$k}items-end { align-items: flex-end; }
+    
+    .#{$k}items-baseline { align-items: baseline; }
+  }
+}
 
 /* layout */
 .container {
@@ -18,39 +48,6 @@
 
 .overflow-y-hidden {
   overflow-y: hidden;
-}
-
-/* flex & grid */
-.flex {
-  display: flex;
-}
-
-.flex-row {
-  flex-direction: row;
-}
-
-.flex-column {
-  flex-direction: column;
-}
-
-.justify-between {
-  justify-content: space-between;
-}
-
-.items-center {
-  align-items: center;
-}
-
-.items-start {
-  align-items: flex-start;
-}
-
-.items-end {
-  align-items: flex-end;
-}
-
-.items-baseline {
-  align-items: baseline;
 }
 
 /* spacing */
