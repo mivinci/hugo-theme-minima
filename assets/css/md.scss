@@ -108,3 +108,11 @@ $heading: (h1, 2.25, 800), (h2, 2, 700), (h3, 1.75, 600), (h4, 1.5, 600),
 .md p sup {
   margin-left: 4px;
 }
+
+.md a {
+  color: var(--prime);
+}
+
+.md a:hover {
+  text-decoration: underline;
+}
