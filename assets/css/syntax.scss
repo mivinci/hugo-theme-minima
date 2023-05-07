@@ -38,6 +38,8 @@
   padding-right: 1em;
   text-align: right;
   user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
 }
 
 .chroma .hl .lnt {
