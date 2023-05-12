@@ -1,7 +1,9 @@
-const comment = '{{ .Site.Params.comment.provider }}'
-const default_theme_config = '{{ .Site.Params.defaultTheme }}'
-const icon_light = '{{ index .Site.Params.switch 1 }}'
-const icon_dark = '{{ index .Site.Params.switch 0 }}'
+import * as params from '@params';
+
+const comment = params.comment.provider
+const default_theme_config = params.defaulttheme
+const icon_light = params.switch[1]
+const icon_dark = params.switch[0]
 const THEME_LIGHT = default_theme_config === 'system' ? 'light' : default_theme_config
 const THEME_DARK = 'dark'
 

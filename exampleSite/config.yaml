@@ -9,7 +9,7 @@ paginate: 12
 theme: hugo-theme-minima
 # defaultContentLanguage specifies the default language to use.
 defaultContentLanguage: en
-# language.x setup
+# language.xxx setup
 languages:
   en:
     languageName: EN # will be displayed in the navbar.
@@ -97,15 +97,42 @@ params:
       reactions: true
       metadata: false
 
+  # search plugin
+  search:
+    enable: true
+    provider: fuse
+    title: Search
+    placeholder: Enter keywords
+    # check out https://fusejs.io
+    fuse:
+      keys:
+        - title
+        - permalink
+        - summary
+        - content
+      distance: 100
+      location: 0
+      threshold: 0.6
+      ignoreLocation: false
+      isCaseSensitive: false
+      includeScore: false
+      includeMatches: false
+      minMatchCharLength: 1
+      shouldSort: true
+      findAllMatches: false
+
 
 # menu.main is an array containing what is used as the navigator.
 menu:
   main:
     - identifier: tags
-      name: "Tags"
-      weight: 2
+      name: Tags
+      weight: 1
     - identifier: series
-      name: "Series"
+      name: Series
+      weight: 2
+    - identifier: search
+      name: 🔍
       weight: 3
 
 # taxonomies defines ways to classify yout posts. Below are some presets that
@@ -114,6 +141,13 @@ taxonomies:
   category: categories
   tag: tags
   series: series
+
+# outputs tells Hugo the kind of files to be rendered.
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
 
 # markup.highlight has two keys set to make sure that the syntax highlighting
 # in your posts are rendered correctly, so DO NOT edit them.

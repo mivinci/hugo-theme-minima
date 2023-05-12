@@ -44,6 +44,16 @@ main p a:hover {
   text-decoration: underline;
 }
 
+main .search > input {
+  width: 100%;
+  padding: .5em;
+  font-size: large;
+  border: 2px solid var(--grid);
+  border-radius: 2px;
+  background-color: transparent;
+  outline: none;
+}
+
 @keyframes showup {
   from {
     opacity: 0;

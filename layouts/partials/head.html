@@ -1,9 +1,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {{ if hugo.IsProduction }}
   {{ template "_internal/opengraph.html" . }}
   {{ template "_internal/twitter_cards.html" . }}
   {{ template "_internal/google_analytics.html" . }}
+  {{ end }}
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#262d33">
   <title>
@@ -13,14 +15,25 @@
     {{ .Site.Title }} - {{ .Title }}
     {{ end }}
   </title>
+  <!-- favicon -->
   {{ $favicon := "favicon.ico" }}
   <link rel="shortcut icon" href="{{ $favicon | relURL }}" type="image/x-icon" />
+  <!-- styles -->
   {{ $options := (dict "targetPath" "minima.css" "outputStyle" "compressed" "enableSourceMap" true) }}
-  {{ $style := resources.Get "css/main.scss" | resources.ExecuteAsTemplate "main.scss" . | resources.ToCSS $options }}
-  <link rel="stylesheet" href="{{ $style.RelPermalink }}">
-  {{ $options = (dict "targetPath" "minima.js" "minify" true) }}
-  {{ $js := resources.Get "js/main.js" | js.Build $options | resources.ExecuteAsTemplate "minima.js" . }}
-  <script defer type="text/javascript" src="{{ $js.RelPermalink }}"></script>
+  {{ $style := resources.Get "css/main.scss" | resources.ExecuteAsTemplate "main.scss" . | resources.ToCSS $options | fingerprint }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
+  <!-- scripts -->
+  {{ $options = (dict "targetPath" "minima.js" "minify" true "params" site.Params) }}
+  {{ $script := resources.Get "js/main.js" | js.Build $options | fingerprint }}
+  <script defer type="text/javascript" src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}"></script>
+  {{ if and .Site.Params.search.enable (eq .Layout "search") }}
+  {{ $options = (dict "minify" true "params" site.Params) }}
+  {{ $search := resources.Get "js/search.js" | js.Build $options}}
+  {{ $fusejs := resources.Get "js/min/fuse.basic.min.js" }}
+  {{ $script := (slice $fusejs $search) | resources.Concat "assets/js/search.js" | fingerprint }}
+  <script defer crossorigin="anonymous" src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}"></script>
+  {{ end }}
+  <!-- i18n -->
   {{ if .IsTranslated }}
 	{{ range .Translations }}
 	<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">

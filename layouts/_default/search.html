@@ -1,0 +1,16 @@
+{{ define "main" }}
+<main class="container mx-auto">
+  {{- $title := .Site.Params.search.title | default .Title }}
+  {{- $placeholder := .Site.Params.search.placeholder | default .Title }}
+  <h1 class="text-4xl font-extrabold mt-6">{{ $title }}</h1>
+  <p class="text-sm mb-6">Powered by <a href="https://fusejs.io" target="_blank">fuse.js</a>.</p>
+  <div class="search">
+    <input class="mb-4"
+      autofocus autocomplete="off" id="search-input" type="search" placeholder="{{ printf `%s ↵` $placeholder }}">
+    {{ if not .Site.Params.search.enable }}
+    <p>No search plugin is enabled.</p>
+    {{ end }}
+    <ul id="search-result"></ul>
+  </div>
+</main>
+{{ end }}

@@ -11,7 +11,9 @@
   <div>
     {{ $paginator := .Paginate (where .Site.RegularPages "Kind" "page") }}
     {{ range $paginator.Pages }}
+    {{ if ne .Page.Layout "search" }}
     {{ partial "item.html" . }}
+    {{ end }}
     {{ end }}
     {{ partial "paginator.html" . }}
   </div>

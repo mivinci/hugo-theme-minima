@@ -1,23 +1,24 @@
 # Minima
 
-A clean and minimal Hugo theme porting from [Hexo Minima](https://github.com/adisaktijrs/hexo-theme-minima). Check out the [example site](https://mivinci.github.io/hugo-theme-minima).
+Minima is a clean and minimal Hugo theme originally ported from [Hexo Minima](https://github.com/adisaktijrs/hexo-theme-minima). Check out the [example site](https://mivinci.github.io/hugo-theme-minima).
 
 ![screenshot](./images/tn.png)
 
-> Note that the main branch is in development stage, UI or configuration may vary.
+> Note that the main branch is in development phase, UI or configuration may vary.
 
 
 ## Features
 
-- [x] Dark mode
-- [x] Multilingual mode
-- [x] Code highlighting - VSCode dark+
-- [x] Math - KaTeX
-- [x] Flowcharts - Mermaid
-- [x] Comment - Disqus, Utterances, Giscus
-- [x] Google analytics
-- [x] External link
-- [x] RSS
+- [x] 🌗 Dark mode
+- [x] 📚 Multilingual mode
+- [x] 🏳️‍🌈 Code highlighting - VSCode dark+
+- [x] 🔢 Math - KaTeX
+- [x] 💹 Flowcharts - Mermaid
+- [x] 🧑‍💻 Comment - Disqus, Utterances, Giscus
+- [x] 🔎 Search - FuseJS
+- [x] 〽️ Google analytics
+- [x] 🔗 External link
+- [x] ✉️ RSS
 
 ## Usage
 
