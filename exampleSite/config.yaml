@@ -44,7 +44,7 @@ params:
   switch: ["🌚", "🌝"]
   # minima has one dark theme and multiple light themes. defaultTheme specifies
   # a default light theme to use. currently available options: light, sand, rock, system.
-  defaultTheme: sand
+  defaultTheme: light
   # displayDate speficies whether or not to display post date on the home page.
   displayDate: true
   # displayDescription specifies whether or not to display post description on
