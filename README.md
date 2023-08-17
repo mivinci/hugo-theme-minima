@@ -52,9 +52,9 @@ Follow [exampleSite/config.yaml](https://github.com/Mivinci/hugo-theme-minima/bl
 | title       | string | title |
 | description | string | description |
 | date        | string | creation time |
-| categories  | array  | category list |
-| series      | array  | series list |
-| tags        | array  | tag list |
+| categories  | array<string>  | category list |
+| series      | array<string>  | series list |
+| tags        | array<string>  | tag list |
 | math        | bool   | enables math plugin |
 | diagram     | bool   | enables diagram plugin |
 | comment     | bool   | enable comment plugin |
