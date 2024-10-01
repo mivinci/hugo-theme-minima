@@ -7,7 +7,7 @@
   {{ template "_internal/google_analytics.html" . }}
   {{ end }}
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#262d33">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#181818">
   <title>
     {{ if .IsHome }}
     {{ .Site.Title }} {{ if .Site.Params.subtitle }} - {{ .Site.Params.subtitle }} {{ end }}
@@ -20,7 +20,7 @@
   <link rel="shortcut icon" href="{{ $favicon | relURL }}" type="image/x-icon" />
   <!-- styles -->
   {{ $options := (dict "targetPath" "minima.css" "outputStyle" "compressed" "enableSourceMap" true) }}
-  {{ $style := resources.Get "css/main.scss" | resources.ExecuteAsTemplate "main.scss" . | resources.ToCSS $options | fingerprint }}
+  {{ $style := resources.Get "css/main.scss" | resources.ExecuteAsTemplate "main.scss" . | css.Sass $options | fingerprint }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
   <!-- scripts -->
   {{ $options = (dict "targetPath" "minima.js" "minify" true "params" site.Params) }}
@@ -41,19 +41,15 @@
 {{ end }}
 </head>
 <script>
-  // default to system color scheme.
-  const default_theme_config = '{{ .Site.Params.defaultTheme }}'
-  const default_light_theme = default_theme_config === 'system' ? 'light' : default_theme_config;
-  let default_theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : default_light_theme;
+  const theme_config = '{{ .Site.Params.defaultTheme }}'
+  const theme_light = theme_config === 'system' ? 'light' : theme_config;
+  let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : theme_light;
+  console.debug(theme);
 
   try {
-    const saved_theme = localStorage.getItem('theme')
-    if (saved_theme) {
-      default_theme = saved_theme === default_light_theme ? saved_theme : default_light_theme;  
-    }
-    localStorage.setItem('theme', default_theme);
-    window.minima_theme = default_theme;
-    document.querySelector('html').classList.add(default_theme);
+    localStorage.setItem('theme', theme);
+    window.minima_theme = theme;
+    document.querySelector('html').classList.add(theme);
   } catch (e) {
     console.error(e);
   }

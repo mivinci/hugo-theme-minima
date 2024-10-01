@@ -7,7 +7,7 @@ dev:
 	hugo server -D -s $(source) --themesDir $(themeDir) --disableFastRender
 
 build:
-	hugo -D --gc --minify -s $(source) --themesDir $(themeDir)
+	hugo --gc --minify -s $(source) --themesDir $(themeDir)
 
 clean:
 	rm -r $(source)/public

@@ -34,6 +34,10 @@ $screens: ("", 0), (sm\:, 640px);
     .#{$k}text-center { text-align: center; }
 
     .#{$k}text-left { text-align: left; }
+
+    .#{$k}w-48 { width: 12rem; }
+
+    .#{$k}w-40 { width: 10rem; }
   }
 }
 
@@ -100,4 +104,12 @@ $texts: (xs, 0.75), (sm, 0.875), (base, 1), (lg, 1.125), (xl, 1.25),
 /* interactivity */
 .cursor-pointer {
   cursor: pointer;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.rounded-lg {
+  border-radius: 0.8rem;
 }

@@ -1,10 +1,11 @@
 baseURL: https://mivinci.github.io/hugo-theme-minima
 languageCode: en-us
 title: Hugo on Minima
-copyright: © 2020-2023 X
+copyright: © 2020-2024 Leo X
 googleAnalytics:
-# paginate specifies the maximum number of posts displayed on the home page.
-paginate: 12
+pagination:
+  # paginate specifies the maximum number of posts displayed on the home page.
+  pagerSize: 4
 # theme specifies the name of the theme to be used.
 theme: hugo-theme-minima
 # defaultContentLanguage specifies the default language to use.
@@ -17,23 +18,13 @@ languages:
   zh-cn:
     languageName: 简中 # will be displayed in the navbar.
     weight: 2
-    author:
-      status: 目前住在地球 🌍
-      description: |
-        这是 Minima, 一个简洁的 Hugo 主题，移植自 [Hexo Minima](https://github.com/adisaktijrs/hexo-theme-minima)。
-        支持深色模式、多语言、数学公式、流程图、代码语法高亮，当然还有分类、标签、系列等等。
     params:
       greet: 你好 :)
-
-# author specifies your name, a slogon and your brief self-introduction.
-author:
-  name: X
-  status: Currently living on Earth 🌍
-  description: |
-    This is Minima, a clean and minimal Hugo theme porting from 
-    [Hexo Minima](https://github.com/adisaktijrs/hexo-theme-minima). It has supports 
-    for dark mode, multilingual mode, math formulas, flowcharts, syntax highlighting, 
-    and of course taxonomies like categories, tags, and series.
+      author:
+        status: 目前住在地球 🌍
+        description: |
+          这是 Minima, 一个简洁的 Hugo 主题，移植自 [Hexo Minima](https://github.com/adisaktijrs/hexo-theme-minima)。
+          支持深色模式、多语言、数学公式、流程图、代码语法高亮，当然还有分类、标签、系列等等。
 
 params:
   # greet specifies greeting words.
@@ -44,7 +35,7 @@ params:
   switch: ["🌚", "🌝"]
   # minima has one dark theme and multiple light themes. defaultTheme specifies
   # a default light theme to use. currently available options: light, sand, rock, system.
-  defaultTheme: light
+  defaultTheme: system
   # displayDate speficies whether or not to display post date on the home page.
   displayDate: true
   # displayDescription specifies whether or not to display post description on
@@ -54,6 +45,17 @@ params:
   selectable: true
   # social is an array containing as many as social accounts to be displayed
   # in the buttom of every page.
+  # author specifies your name, a slogon and your brief self-introduction.
+  author:
+    name: Leo X
+    status: Currently living on Earth 🌍
+    avatar: https://avatars.githubusercontent.com/u/33592375?v=4
+    description: |
+      This is Minima, a clean and minimal Hugo theme porting from 
+      [Hexo Minima](https://github.com/adisaktijrs/hexo-theme-minima). It has supports 
+      for dark mode, multilingual mode, math formulas, flowcharts, syntax highlighting, 
+      and of course taxonomies like categories, tags, and series.
+
   social:
     - name: "twitter"
       url: "https://twitter.com/realmivinci"
@@ -66,12 +68,12 @@ params:
 
   # math plugin
   math:
-    enable: false
+    enable: true
     provider: katex
 
   # diagram plugin
   diagram:
-    enable: false
+    enable: true
     provider: mermaid
 
   # comment plugin
@@ -125,15 +127,18 @@ params:
 # menu.main is an array containing what is used as the navigator.
 menu:
   main:
+    - identifier: home
+      name: Home
+      weight: 1
     - identifier: tags
       name: Tags
-      weight: 1
+      weight: 2
     - identifier: series
       name: Series
-      weight: 2
+      weight: 3
     - identifier: search
       name: 🔍
-      weight: 3
+      weight: 4
 
 # taxonomies defines ways to classify yout posts. Below are some presets that
 # most bloggers use, so you can replace them with whatever you like.
