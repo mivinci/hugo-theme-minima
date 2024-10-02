@@ -11,7 +11,7 @@
       
       <p class="flex items-center mt-0">
         {{ range $_, $key := .Site.Params.Social }}
-          <a class="icon ml-1 mr-1" href="{{ $key.url }}" title="{{ $key.name }}">
+          <a class="icon ml-1 mr-1" href="{{ relURL $key.url }}" title="{{ $key.name }}">
           {{ if $key.svg }}
             {{ $key.svg | safeHTML }}
           {{ else }}
