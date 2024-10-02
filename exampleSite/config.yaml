@@ -1,22 +1,31 @@
 baseURL: https://mivinci.github.io/hugo-theme-minima
+
 languageCode: en-us
+
 title: Hugo on Minima
+
 copyright: © 2020-2024 Leo X
+
 googleAnalytics:
+
 pagination:
-  # paginate specifies the maximum number of posts displayed on the home page.
   pagerSize: 4
-# theme specifies the name of the theme to be used.
+  # Specify the number of posts listed at home page
+
 theme: hugo-theme-minima
-# defaultContentLanguage specifies the default language to use.
+# Specify a theme to use
+
 defaultContentLanguage: en
-# language.xxx setup
+# Specify the default language
+
 languages:
+# Override language-specific configurations
   en:
-    languageName: EN # will be displayed in the navbar.
+    languageName: EN
     weight: 1
+    
   zh-cn:
-    languageName: 简中 # will be displayed in the navbar.
+    languageName: 简中
     weight: 2
     params:
       greet: 你好 :)
@@ -27,25 +36,23 @@ languages:
           支持深色模式、多语言、数学公式、流程图、代码语法高亮，当然还有分类、标签、系列等等。
 
 params:
-  # greet specifies greeting words.
+# Define regular configurations
+
   greet: Hello :)
-  # subtitle speficies a subtitle displayed right after the site title.
+  
   subtitle:
-  # switch specifies two emojis used as the button toggling color themes.
+  
   switch: ["🌚", "🌝"]
-  # minima has one dark theme and multiple light themes. defaultTheme specifies
-  # a default light theme to use. currently available options: light, sand, rock, system.
+  
   defaultTheme: system
-  # displayDate speficies whether or not to display post date on the home page.
+  # Specify the default color theme, available values: light, sand, rock, system.
+
   displayDate: true
-  # displayDescription specifies whether or not to display post description on
-  # the hoem page.
+
   displayDescription: true
-  # selectable specifies if or not your post content can be selected.
+
   selectable: true
-  # social is an array containing as many as social accounts to be displayed
-  # in the buttom of every page.
-  # author specifies your name, a slogon and your brief self-introduction.
+
   author:
     name: Leo X
     status: Currently living on Earth 🌍
@@ -66,30 +73,30 @@ params:
     - name: "rss"
       url: "index.xml"
 
-  # math plugin
   math:
     enable: true
     provider: katex
 
-  # diagram plugin
   diagram:
     enable: true
     provider: mermaid
 
-  # comment plugin
   comment:
     enable: true
     provider: giscus
-    # check out https://disqus.com/
+
     disqus:
+    # See also https://disqus.com
       shortname: hugo-minima
-      # check out https://utteranc.es
+
     utterances:
+    # See also https://utteranc.es
       repo: mivinci/hugo-theme-minima
       issueTerm: pathname
       label: comment
-    # check out https://giscus.app
+
     giscus: 
+    # See also https://giscus.app
       repo: mivinci/hugo-theme-minima
       repoId: MDEwOlJlcG9zaXRvcnkzODcxMjM2NDU=
       category: Comments
@@ -99,14 +106,14 @@ params:
       reactions: true
       metadata: false
 
-  # search plugin
   search:
     enable: true
     provider: fuse
     title: Search
     placeholder: Enter keywords
-    # check out https://fusejs.io
+
     fuse:
+    # See also https://fusejs.io
       keys:
         - title
         - permalink
@@ -123,8 +130,6 @@ params:
       shouldSort: true
       findAllMatches: false
 
-
-# menu.main is an array containing what is used as the navigator.
 menu:
   main:
     - identifier: home
@@ -140,23 +145,23 @@ menu:
       name: 🔍
       weight: 4
 
-# taxonomies defines ways to classify yout posts. Below are some presets that
-# most bloggers use, so you can replace them with whatever you like.
 taxonomies:
   category: categories
   tag: tags
   series: series
 
-# outputs tells Hugo the kind of files to be rendered.
 outputs:
   home:
     - HTML
     - RSS
     - JSON
 
-# markup.highlight has two keys set to make sure that the syntax highlighting
-# in your posts are rendered correctly, so DO NOT edit them.
 markup:
+# **DO NOT EDIT** anything below. 
+# Because unlike other Hugo themes, the way Minima uses to do syntax
+# highlighting depends strongly on configurations below, so that the
+# color theme of code blocks changes with the blog color theme, instead
+# of being static like you may have seen on other Hugo themes.
   highlight:
     lineNos: true
     noClasses: false
