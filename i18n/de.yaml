@@ -1,0 +1,28 @@
+recent:
+  other: Neuste Beiträge
+older:
+  other: Ältere Beiträge
+
+home:
+  other: Startseite
+about:
+  other: Über
+categories:
+  other: Kategorien
+tags:
+  other: Tags
+series:
+  other: Serie
+
+timeformat:
+  other: 02.01.2006
+
+paginator:
+  prev:
+    other: Neuere
+  next:
+    other: Älter
+
+post:
+  at:
+    other: Gepostet
