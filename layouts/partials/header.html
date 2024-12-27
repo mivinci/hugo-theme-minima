@@ -19,11 +19,13 @@
         </li>
         {{ end }}
       </ul>
+      {{ if gt (len $.Site.Home.AllTranslations) 1 }}
       <ul class="flex item-center text-sm font-semibold">
         {{ range $.Site.Home.AllTranslations }}
         <li class="ml-2"><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
         {{ end}}
       </ul>
+      {{ end }}
     </nav>
   </div>
 </header>
