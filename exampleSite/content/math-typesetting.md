@@ -2,7 +2,7 @@
 author: Mivinci
 title: Math Typesetting
 date: 2020-07-18T10:52:59+08:00
-description: A brief guide to write mathematical notation.
+description: "A brief guide to write mathematical notation using KaTeX. Covers inline math, display math, fractions and more."
 math: true
 tags: 
     - KaTex

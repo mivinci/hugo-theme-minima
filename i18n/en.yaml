@@ -26,3 +26,6 @@ paginator:
 post:
   at:
     other: Post at
+
+original:
+  other: Original
