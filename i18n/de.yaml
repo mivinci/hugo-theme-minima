@@ -26,3 +26,6 @@ paginator:
 post:
   at:
     other: Gepostet
+
+original:
+  other: Original

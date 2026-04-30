@@ -1,11 +1,14 @@
 {{ define "main" }}
 <div class="container mx-auto">
   <h1 class="text-4xl font-extrabold mt-6 mb-6">{{ .Title }}</h1>
-  <div class="mb-3 text-sm flex flex-col-reverse sm:flex-row sm:justify-between gap-2">
-    {{ if .Params.tags }}
-    <div class="flex flex-wrap">
-      {{ range $tag := .Params.tags }}
-      {{ $url := printf "tags/%s" $tag | relLangURL }}
+  <div class="mb-3 text-sm flex flex-col sm:flex-row sm:justify-between gap-2">
+    {{ if or .Params.original .Params.tags }}
+    <div class="flex flex-wrap items-center gap-1">
+      {{ if .Params.original }}
+      <span class="text-xs font-bold mr-1" style="display: inline-block; padding: 0 6px; border-radius: 3px; border: 1px solid var(--text); color: var(--text);">{{ T "original" }}</span>
+      {{ end }}
+      {{ range .Params.tags }}
+      {{ $url := printf "tags/%s" . | relLangURL }}
       <a class="mr-1" href="{{ $url }}">#{{ . }}</a>
       {{ end }}
     </div>

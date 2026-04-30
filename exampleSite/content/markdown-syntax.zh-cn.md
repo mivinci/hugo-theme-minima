@@ -2,7 +2,7 @@
 author: "Mivinci"
 title: "Markdown 语法指北"
 date: "2021-07-18T10:52:59+08:00"
-description: "一篇 Markdown 示例文章，翻译自官方示例。"
+description: "一篇 Markdown 示例文章，翻译自官方示例。展示了标题、段落、列表、代码块、表格等常见语法的渲染效果。"
 categories:
 tags:
   - markdown

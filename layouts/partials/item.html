@@ -1,12 +1,9 @@
 <div>
-  <div class="flex flex-col-reverse sm:flex-row sm:justify-between">
+  <div>
     {{ if .Page.Params.link }}
     <a class="text-lg font-bold" href="{{ .Page.Params.link }}">{{ .Title }}</a>
     {{ else }}
     <a class="text-lg font-bold" href="{{ .RelPermalink }}">{{ .Title }}</a>
-    {{ end }}
-    {{ if .Site.Params.displayDate }}
-    <div class="text-sm font-bold whitespace-nowrap">{{ .Date | time.Format (T "timeformat") }}</div>
     {{ end }}
   </div>
   {{ if .Site.Params.displayDescription }}
@@ -14,4 +11,17 @@
     {{ .Description | markdownify | safeHTML }}
   </p>
   {{ end }}
+  <div class="flex items-center gap-2 mb-4" style="justify-content: space-between;">
+    <div class="flex items-center gap-2">
+      {{ if .Page.Params.original }}
+      <span class="text-xs font-bold" style="display: inline-block; padding: 0 6px; border-radius: 3px; border: 1px solid var(--text); color: var(--text);">{{ T "original" }}</span>
+      {{ end }}
+      {{ range .Page.Params.tags }}
+      <a class="text-xs" href="{{ "/tags/" | relURL }}{{ . | urlize }}">#{{ . }}</a>
+      {{ end }}
+    </div>
+    {{ if .Site.Params.displayDate }}
+    <div class="text-xs whitespace-nowrap">{{ .Date | time.Format (T "timeformat") }}</div>
+    {{ end }}
+  </div>
 </div>
